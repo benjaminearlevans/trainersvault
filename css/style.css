@@ -1,0 +1,122 @@
+@import url("fonts.css");
+
+body{font-family: 'HelveticaNeue'; color: 000;}
+body p{color: #6F6F6F;}
+.navbar-default{border-bottom: 0;}
+.navbar-default .navbar-nav>li>a{font-size: 12px;}
+.navbar-default .btn{border-radius: 2px; font-size: 12px;}
+.navbar-default .form-control{border: 1px solid #FFFFFF; border-radius: 2px;}
+.navbar-default .nav-search-field{max-width: 120px;}
+.navbar-default .input-group-addon{background: none; border-radius: 2px;}
+.navbar-default .input-group .form-control{border-left: 0; left: -1px;}
+.navbar-default .input-group .form-control:focus{box-shadow: none; outline: none;}
+
+.navbar-transparent{background: none;}
+.navbar-transparent .navbar-nav>li>a{color: #fff;}
+.navbar-transparent .navbar-nav>li>a:hover{color: #cacaca;}
+.navbar-transparent .form-control{background: none; color: #fff;}
+.navbar-transparent .input-group-addon{color: #fff; border-color: #fff;}
+.navbar-transparent .input-group .form-control{border-left: 0;}
+.navbar-transparent.affix{background:#000;}
+
+.homepage-hero{height: 100vh; color: #fff; background: url(../img/Header.jpg) center center no-repeat transparent; background-size: cover;}
+.homepage-hero .hh-innner{max-width: 476px;}
+.homepage-hero h1{font-family: Tungsten; font-size: 130px; font-weight: 600; line-height: 118px; margin: 0 0 37px;}
+.homepage-hero p{font-size: 18px; line-height: 28px; margin: 0 0 15px; color: #fff;}
+.homepage-hero .container, .homepage-hero .row, .homepage-hero .col-xs-12{height: 100%;}
+.homepage-hero .col-xs-12{display: flex; flex-direction: column; justify-content: center;}
+.homepage-hero .btn{font-family: Tungsten;	font-size: 22px; line-height: normal; padding: 22px 36px;}
+.homepage-hero .hh-action{margin-top: 50px;}
+.homepage-hero .hh-action span{display: inline-block; margin-left: 28px; font-size: 12px; font-weight: 500;}
+
+.section50{padding:60px 15px;}
+.card-items{margin-top: 32px; display: flex; justify-content: space-between;}
+.card{flex: 0 0 17%;}
+.card .card-img{border-radius: 2px; background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;}
+.card .card-img img{width: 100%;}
+.card .card-footer{margin-top: 12px;}
+.card .card-price{float: left; width: 20%; color: #000; font-weight: 500;}
+.card .card-detail{float: left; width: 80%; color: #6F6F6F;}
+
+.section-title h2{font-family: Tungsten; font-size: 44px; font-weight: 600;}
+.section-title p{font-size: 16px;}
+
+.section-trainers-video{background-color: #101010; padding: 100px 15px;}
+.section-trainers-video .section-title{margin-bottom: 36px;}
+.section-trainers-video .section-title, .section-trainers-video .section-title p{color: #fff;}
+.video-large, .video-small{text-align: center; background-repeat: no-repeat; background-size: cover; background-position: center; display: flex; flex-direction: row; justify-content: center; align-items: center; overflow: hidden; position: relative;}
+.video-large{height: 430px;margin-bottom: 40px;}
+.video-small{height: 195px;margin-bottom: 40px; }
+.video-small .video-play-btn, .card-video .video-play-btn{background:url(../img/icon_play_small.png) center center no-repeat transparent; width: 62px; height: 62px; display: inline-block;}
+.video-large .video-play-btn{background:url(../img/icon_play.png) center center no-repeat transparent; width: 82px; height: 82px; display: inline-block;}
+.video-title{position: absolute; top: 15px; left: 15px; color: #fff; font-size: 14px;}
+.video-duration{position: absolute; bottom: 15px; right:15px; color: #fff; font-size: 14px;}
+.video-small .video-title{top: 10px; left: 15px;}
+.video-small .video-duration{bottom: 10px; right:15px;}
+
+.card-video-title{margin-top: 60px;}
+.card-video{flex: 0 0 22%;}
+.card-video .card-img{position: relative;}
+.card-video-info{position: absolute; bottom: 15px; left: 15px; color: #fff;}
+.card-video .video-play-btn{position: absolute; top: 50%; left: 50%; margin-top: -31px; margin-left: -31px;}
+
+.section-trainers-oftheweek{background-color: #000000; padding: 77px 0; color: #fff;}
+.section-trainers-oftheweek p{color: #fff;}
+
+.tow-wrapper{margin-top: 35px;}
+.photo-box-simple{margin-bottom: 40px; position: relative;}
+.photo-box-simple.favorite:after{content: " "; position: absolute; width: 40px; height: 45px; background: url(../img/badge.png) center center no-repeat transparent; right: 12px; top: 0;}
+.photo-box-simple img{width: 100%;}
+
+.hero-middle{height: 620px; padding: 0 15px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.hero-middle .btn{margin-top: 50px;}
+.hero-middle h1{font-family: Tungsten;	font-size: 84px;font-weight: 600;line-height: 118px;}
+.hero-middle p{font-size: 18px; line-height: 28px; color: #fff;}
+.hero-middle-inner{max-width: 586px; text-align: center;}
+
+.hero-middle-yourgoal{background:url(../img/yourgoal-hero.png) center center no-repeat transparent;  background-size: cover; color: #fff;}
+
+.section-title2 h2{font-family: Tungsten; font-size: 60px; font-weight: 600; line-height: 72px;}
+.section-title2 p{font-size: 16px; line-height: 24px;}
+
+.city-wrapper{margin-top: 54px;}
+.simple-img-wrapper{margin-bottom: 28px;}
+.simple-img-wrapper img{width: 100%;}
+.section-ending h3{font-family: Tungsten; font-size: 32px; font-weight: 600; line-height: 38px;}
+.section-ending a{color:rgba(252,199,2,1);}
+
+.hero-footer{background: url(../img/bg_footer.jpg) center center no-repeat transparent; color: #fff; background-size: cover;}
+
+.section-footer{border-bottom: 8px solid #FCC702; padding: 95px 0 22px;}
+.logo-block{padding-bottom: 40px; border-bottom: 2px solid #DADADA;}
+.footer-menu-widget{padding: 38px 0 0;}
+.footer-menu-widget h4{color: #252729; font-family: Tungsten; font-size: 24px; font-weight: bold; line-height: 20px; margin-bottom: 25px;}
+.footer-menu-widget ul{list-style: none; padding: 0; margin: 0;}
+.footer-menu-widget ul>li{margin-bottom: 16px;}
+.footer-menu-widget ul>li>a{color: #000;}
+.footer-copyright{margin-top: 86px; font-size: 12px;}
+
+.btn{border-radius: 2px; border: 0;}
+.btn.btn-small{font-size: 12px; padding: 12px;}
+.btn.btn-lg{font-family: Tungsten; font-size: 22px; font-weight: 600; padding: 16px 26px;}
+.btn-invert{background-color: #101010; color: #fff;}
+.btn-invert:hover{background-color: #4a4a4a; color: #fff;}
+
+.gap{height: 100px; background-color: #F6F6F6;}
+.color-yellow{color: rgba(252,199,2,1);}
+.w560{width: 560px; margin: 0 auto;}
+
+.rating {text-align: left;}
+.rating > span {display: inline-block;position: relative;margin-left: 5px;}
+
+.rating.rate1 > span:nth-child(1):before{content: url(../img/star_on.png);position: absolute;top: 2px;}
+.rating.rate2 > span:nth-child(1):before, .rating.rate2 > span:nth-child(2):before{content: url(../img/star_on.png);position: absolute;top: 2px;}
+.rating.rate3 > span:nth-child(1):before, .rating.rate3 > span:nth-child(2):before, .rating.rate3 > span:nth-child(3):before{content: url(../img/star_on.png);position: absolute;top: 2px;}
+.rating.rate4 > span:nth-child(1):before, .rating.rate4 > span:nth-child(2):before, .rating.rate4 > span:nth-child(3):before, .rating.rate4 > span:nth-child(4):before{content: url(../img/star_on.png);position: absolute;top: 2px;}
+.rating.rate5 > span:nth-child(1):before, .rating.rate5 > span:nth-child(2):before, .rating.rate5 > span:nth-child(3):before, .rating.rate5 > span:nth-child(4):before, .rating.rate5 > span:nth-child(5):before{content: url(../img/star_on.png);position: absolute;top: 2px;}
+/*.rating > span:hover:before,
+.rating > span:hover ~ span:before {content: url(../img/star_on.png);position: absolute;top: 2px;}*/
+
+@media screen and (min-width: 768px){
+	.navbar-form .form-group{max-width: 120px;}
+}
