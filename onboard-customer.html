@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/yamm.css" rel="stylesheet">
+    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<div class="onboard-wrapper">
+		<div class="container" style="max-width: 700px;">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<img src="img/trainersvault_logo_large.png">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					
+					<div class="onboard-progress-block">
+						<div id="step1" class="onboard-progress active">ABOUT YOU</div>
+						<div id="step2" class="onboard-progress">YOUR GOALS</div>
+						<div id="step3" class="onboard-progress">ACCEPT PLEDGE</div>
+					</div>
+
+					<div class="onboard-content">
+						<form class="default-form">
+							<div id="onboard1" class="onboard-item active">
+								
+								<h2 class="onboard-title">BASIC INFO</h2>
+								<p>Nothing fancy, just a few basic details about you so we can get to know you better</p>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Legal First Name</label>
+											<input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your first name">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="lastname">Legal Last Name</label>
+											<input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter your last name">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label>Height</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="height1" name="height" value="1">
+									                	<label for="height1">1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="height2" name="height" value="2">
+									                	<label for="height2">2</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="height3" name="height" value="3">
+									                	<label for="height3">3</label>
+									              	</li>
+									            </ul>
+									         </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="lastname">Weight</label>
+											<input type="text" id="lastname" name="lastname" class="form-control" placeholder="Data">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label>Gender</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="gender1" name="gender" value="1">
+									                	<label for="gender1">1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="gender2" name="gender" value="2">
+									                	<label for="gender2">2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label>DOB</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="dob1" name="dob" value="1">
+									                	<label for="dob1">1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="dob2" name="dob" value="2">
+									                	<label for="dob2">2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert" onclick="nextProgress()">NEXT</button>
+									</div>
+								</div>
+
+							</div>
+							<div id="onboard2"  class="onboard-item">
+								
+								<h2 class="onboard-title">YOUR GOALS</h2>
+								<p>What do you want to achieve? Don’t worry, you can change this later</p>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">I want to...</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="goal1" name="goal" value="1">
+									                	<label for="goal1">Goal 1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="goal2" name="goal" value="2">
+									                	<label for="goal2">Goal 2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12">
+										<div class="add-goal-btn" style="margin-top: 50px;">
+											<a href="#" class="color-black"><i class="glyphicon glyphicon-plus-sign"></i> Add Another Goal</a>
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline" onclick="prevProgress()">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert" onclick="nextProgress()">NEXT</button>
+									</div>
+								</div>
+
+							</div>
+							<div id="onboard3"  class="onboard-item">
+								<h2 class="onboard-title">ACCEPT PLEDGE</h2>
+								<p>All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!</p>
+
+								<div class="onboard-content-box">
+									<p>All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guideline</p>
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline" onclick="prevProgress()">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert">AGREE</button>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- page script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	var activePage = 1;
+    	$(document).ready(function(){
+    		setContentHeight($('#onboard1'));
+    	});
+
+    	function nextProgress() {
+    		if(activePage == 3) return false;
+
+    		$('#onboard' + activePage).addClass('done');
+    		activePage++;
+    		$('#onboard' + activePage).addClass('active');
+    		$('#step' + activePage).addClass('active');
+
+    		setContentHeight($('#onboard' + activePage));
+    	}
+
+    	function prevProgress(){
+    		if(activePage == 1) return false;
+
+    		$('#onboard' + activePage).removeClass('active');
+    		$('#step' + activePage).removeClass('active');
+    		activePage--;
+    		$('#onboard' + activePage).removeClass('done');
+
+    		setContentHeight($('#onboard' + activePage));
+    	}
+
+    	function setContentHeight(currentElement){
+    		var contentHeight = currentElement.height();
+    		$('.onboard-content').height(contentHeight);
+    	}
+
+    	$(window).resize(function(){
+    		var activeElement = $('.onboard-item.active:not(.done)');
+    		setContentHeight(activeElement);
+    	});
+    </script>
+
+</body>
+</html>

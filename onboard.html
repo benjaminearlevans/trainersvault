@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/yamm.css" rel="stylesheet">
+    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<div class="onboard-wrapper">
+		<div class="container" style="max-width: 700px;">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<img src="img/trainersvault_logo_large.png">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					
+					<div class="onboard-progress-block">
+						<div id="step1" class="onboard-progress active">ABOUT YOU</div>
+						<div id="step2" class="onboard-progress">EXPERTISE</div>
+						<div id="step3" class="onboard-progress">PAYMENT</div>
+						<div id="step4" class="onboard-progress">ACCEPT PLEDGE</div>
+					</div>
+
+					<div class="onboard-content">
+						<form class="default-form">
+							<div id="onboard1" class="onboard-item active">
+								
+								<h2 class="onboard-title">BASIC INFO</h2>
+								<p>Nothing fancy, just a few basic details about you so we can get to know you better</p>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Legal First Name</label>
+											<input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your first name">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="lastname">Legal Last Name</label>
+											<input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter your last name">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="addressline1">Address Line 1</label>
+											<input type="text" id="addressline1" name="addressline1" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="addressline2">Address Line 2</label>
+											<input type="text" id="addressline2" name="addressline2" class="form-control" placeholder="data">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="addressline1">City</label>
+											<input type="text" id="addressline1" name="addressline1" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="state">State</label>
+													<input type="text" id="state" name="state" class="form-control" placeholder="data">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="zip">Zip</label>
+													<input type="text" id="zip" name="zip" class="form-control" placeholder="data">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert" onclick="nextProgress()">NEXT</button>
+									</div>
+								</div>
+
+							</div>
+							<div id="onboard2"  class="onboard-item">
+								
+								<h2 class="onboard-title">EXPERTISE</h2>
+								<p>Nows the time where you get to show off your skills. Tell us what kind of trainer you are, the more you share the more you’re seen!</p>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Primary Speciality</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="primaryspeciality1" name="primaryspeciality" value="1">
+									                	<label for="primaryspeciality1">Primary Speciality 1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="primaryspeciality2" name="primaryspeciality" value="2">
+									                	<label for="primaryspeciality2">Primary Speciality 2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Years Experience</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="yearsexperience1" name="yearsexperience" value="1">
+									                	<label for="yearsexperience1">Year Experience 1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="yearsexperience2" name="yearsexperience" value="2">
+									                	<label for="yearsexperience2">Year Experience 2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Qualifications</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="qualification1" name="qualification" value="1">
+									                	<label for="qualification1">Qualification 1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="qualification2" name="qualification" value="2">
+									                	<label for="qualification2">Qualification 2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="contactnumber">Contact Number</label>
+											<input type="text" id="contactnumber" name="contactnumber" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="firstname">Qualifications</label>
+											<div class="btn-group custom-dropdown-small custom-dropdown-block">
+									            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement=""><i>-- select --</i></span> <span class="caret"></span></button>
+									            <ul class="dropdown-menu">
+									             	<li>
+									                	<input type="radio" id="qualification21" name="qualification2" value="1">
+									                	<label for="qualification21">Qualification 1</label>
+									              	</li>
+									              	<li>
+									                	<input type="radio" id="qualification22" name="qualification2" value="2">
+									                	<label for="qualification22">Qualification 2</label>
+									              	</li>
+									            </ul>
+									        </div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="licensenumber">License Number</label>
+											<input type="text" id="licensenumber" name="licensenumber" class="form-control" placeholder="data">
+										</div>
+									</div>
+
+									<div class="col-xs-12">
+										<div class="add-goal-btn">
+											<a href="#" class="color-black"><i class="glyphicon glyphicon-plus-sign"></i> Add Another Qualification</a>
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline" onclick="prevProgress()">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert" onclick="nextProgress()">NEXT</button>
+									</div>
+								</div>
+							</div>
+
+							<div id="onboard3"  class="onboard-item">
+								<h2 class="onboard-title">PAYMENT</h2>
+								<p>Want to get paid? Fill out the form below so we know where to send your money. Please note; always use your legal name</p>
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="nameonaccount">Name on Account</label>
+											<input type="text" id="nameonaccount" name="nameonaccount" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="taxidnumber">Tax ID Number</label>
+											<input type="text" id="taxidnumber" name="taxidnumber" class="form-control" placeholder="data">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="sortcode">Sort Code</label>
+											<input type="text" id="sortcode" name="sortcode" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="accnumber">Account Number</label>
+											<input type="text" id="accnumber" name="accnumber" class="form-control" placeholder="data">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<div class="form-group">
+											<label for="routingnumber">Routing Number</label>
+											<input type="text" id="routingnumber" name="routingnumber" class="form-control" placeholder="data">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="bankstate">Bank State</label>
+													<input type="text" id="bankstate" name="bankstate" class="form-control" placeholder="data">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="bankzip">Bank Zip</label>
+													<input type="text" id="bankzip" name="bankzip" class="form-control" placeholder="data">
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline" onclick="prevProgress()">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert" onclick="nextProgress()">NEXT</button>
+									</div>
+								</div>
+
+							</div>
+
+							<div id="onboard4"  class="onboard-item">
+								<h2 class="onboard-title">ACCEPT PLEDGE</h2>
+								<p>All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!</p>
+
+								<div class="onboard-content-box">
+									<p>All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guidelines. Please give them a read, and click agree to get started!All of our members adhere to our terms of service, privacy policy and community guideline</p>
+								</div>
+
+								<div class="row onboard-action">
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-outline" onclick="prevProgress()">BACK</button>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<button type="button" class="btn btn-default btn-lg btn-block btn-invert">AGREE</button>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- page script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	var activePage = 1;
+    	$(document).ready(function(){
+    		setContentHeight($('#onboard1'));
+    	});
+
+    	function nextProgress() {
+    		if(activePage == 4) return false;
+
+    		$('#onboard' + activePage).addClass('done');
+    		activePage++;
+    		$('#onboard' + activePage).addClass('active');
+    		$('#step' + activePage).addClass('active');
+
+    		setContentHeight($('#onboard' + activePage));
+    	}
+
+    	function prevProgress(){
+    		if(activePage == 1) return false;
+
+    		$('#onboard' + activePage).removeClass('active');
+    		$('#step' + activePage).removeClass('active');
+    		activePage--;
+    		$('#onboard' + activePage).removeClass('done');
+
+    		setContentHeight($('#onboard' + activePage));
+    	}
+
+    	function setContentHeight(currentElement){
+    		var contentHeight = currentElement.height();
+    		$('.onboard-content').height(contentHeight);
+    	}
+
+    	$(window).resize(function(){
+    		var activeElement = $('.onboard-item.active:not(.done)');
+    		setContentHeight(activeElement);
+    	});
+    </script>
+
+</body>
+</html>
