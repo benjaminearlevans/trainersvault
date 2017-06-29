@@ -214,6 +214,14 @@
     	var activePage = 1;
     	$(document).ready(function(){
     		setContentHeight($('#onboard1'));
+
+    		$(".onboard-progress").each(function(index){
+    			$(this).click(function(){
+    				var stepPos = index + 1;
+    				if(activePage == stepPos) return false;
+    				jumpToPage(stepPos);
+    			});
+    		});
     	});
 
     	function nextProgress() {
@@ -236,6 +244,55 @@
     		$('#onboard' + activePage).removeClass('done');
 
     		setContentHeight($('#onboard' + activePage));
+    	}
+
+    	function jumpToPage(step){
+    		if(step > activePage){
+
+    			var t = 10;
+	    		for(var x = activePage + 1; x<step+1; x++){
+	    			t = t * x;
+	    			activateTab(x, t);
+	    		}
+
+    			$('#onboard' + activePage).addClass('done');
+	    		activePage = step;
+	    		$('#onboard' + activePage).removeClass('done').addClass('active');
+
+	    		for(var x = 1; x<step; x++){
+	    			$('#onboard' + x).addClass('done').addClass('active');
+	    		}
+
+	    		setContentHeight($('#onboard' + activePage));
+    		}else{
+    			var t = 10;
+	    		for(var x = activePage; x>step; x--){
+	    			t = t * x;
+	    			disableTab(x, t);
+	    		}
+
+    			for(var x=activePage; x>step; x--){
+    				$('#onboard' + x).removeClass('done').removeClass('active');
+    			}
+
+    			activePage = step;
+    			$('#onboard' + activePage).removeClass('done').addClass('active');
+
+    			setContentHeight($('#onboard' + activePage));
+    		}
+
+    	}
+
+    	function activateTab(tabIndex, time){
+    		setTimeout(function(){
+				$('#step' + tabIndex).addClass('active');
+			}, time);
+    	}
+
+    	function disableTab(tabIndex, time){
+    		setTimeout(function(){
+				$('#step' + tabIndex).removeClass('active');
+			}, time);
     	}
 
     	function setContentHeight(currentElement){
