@@ -9,12 +9,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/yamm.css" rel="stylesheet">
     <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
     
     <link href="css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,7 +47,7 @@
         			</div>
 				</form>
 				<ul class="nav navbar-nav">
-					<li class="dropdown yamm-fw">
+					<li id="dropexplore" class="dropdown yamm-fw">
 						<a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">EXPLORE<b class="caret"></b></a>
 		                <ul class="dropdown-menu">
 							<li class="container">
@@ -122,10 +125,10 @@
 		                </ul>
 	              </li>
 				</ul>
-				<div class="nav navbar-nav navbar-right">
+				<div class="nav navbar-nav navbar-right no-margin">
 					<a href="#" class="btn btn-default navbar-btn">SIGN UP</a>
 				</div>
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right no-margin">
 					<li><a href="#">LOGIN</a></li>
 				</ul>
 			</nav>
@@ -166,7 +169,8 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="card-items">
+				<div id="classes-slider-card" class="owl-carousel" style="margin-top: 32px;">
+				  
 					<div class="card">
 						<div class="card-img">
 							<img src="img/card1.png">
@@ -180,24 +184,7 @@
 								<div class="rating rate3">
 									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
 								</div>
-								<div>(000)</div>
-							</div>
-						</div>	
-					</div>
-					<div class="card">
-						<div class="card-img">
-							<img src="img/card2.png">
-						</div>
-						<div class="card-footer">
-							<div class="clearfix">
-								<div class="card-price">$100</div>
-								<div class="card-detail">1 hour · Workout In the park with Joan</div>
-							</div>
-							<div>
-								<div class="rating rate2">
-									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
-								</div>
-								<div>(000)</div>
+								<div class="rating-det">(000)</div>
 							</div>
 						</div>	
 					</div>
@@ -211,10 +198,10 @@
 								<div class="card-detail">1 hour · Workout In the park with Joan</div>
 							</div>
 							<div>
-								<div class="rating rate1">
+								<div class="rating rate3">
 									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
 								</div>
-								<div>(000)</div>
+								<div class="rating-det">(000)</div>
 							</div>
 						</div>	
 					</div>
@@ -228,16 +215,16 @@
 								<div class="card-detail">1 hour · Workout In the park with Joan</div>
 							</div>
 							<div>
-								<div class="rating rate5">
+								<div class="rating rate3">
 									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
 								</div>
-								<div class="card-count">(000)</div>
+								<div class="rating-det">(000)</div>
 							</div>
 						</div>	
 					</div>
 					<div class="card">
 						<div class="card-img">
-							<img src="img/card2.png">
+							<img src="img/card1.png">
 						</div>
 						<div class="card-footer">
 							<div class="clearfix">
@@ -245,14 +232,31 @@
 								<div class="card-detail">1 hour · Workout In the park with Joan</div>
 							</div>
 							<div>
-								<div class="rating rate4">
+								<div class="rating rate3">
 									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
 								</div>
-								<div>(000)</div>
+								<div class="rating-det">(000)</div>
 							</div>
 						</div>	
 					</div>
-					
+					<div class="card">
+						<div class="card-img">
+							<img src="img/card1.png">
+						</div>
+						<div class="card-footer">
+							<div class="clearfix">
+								<div class="card-price">$100</div>
+								<div class="card-detail">1 hour · Workout In the park with Joan</div>
+							</div>
+							<div>
+								<div class="rating rate3">
+									<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+								</div>
+								<div class="rating-det">(000)</div>
+							</div>
+						</div>	
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -273,19 +277,19 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-8">
-					<div class="video-large" style="background-image: url(../img/vid-large.png);">
+					<div class="video-large" style="background-image: url(img/vid-large.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="video-small" style="background-image: url(../img/vid-small.png);">
+					<div class="video-small" style="background-image: url(img/vid-small.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
 					</div>
-					<div class="video-small" style="background-image: url(../img/vid-small.png);">
+					<div class="video-small" style="background-image: url(img/vid-small.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
@@ -294,21 +298,21 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-4">
-					<div class="video-small" style="background-image: url(../img/vid-small.png);">
+					<div class="video-small" style="background-image: url(img/vid-small.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="video-small" style="background-image: url(../img/vid-small.png);">
+					<div class="video-small" style="background-image: url(img/vid-small.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="video-small" style="background-image: url(../img/vid-small.png);">
+					<div class="video-small" style="background-image: url(img/vid-small.png);">
 						<div class="video-title">Video Title</div>
 						<a href="#" class="video-play-btn"></a>
 						<div class="video-duration">00:00</div>
@@ -329,8 +333,8 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					
-					<div class="card-items">
+
+					<div id="workout-slider-card" class="owl-carousel">
 						<div class="card card-video">
 							<div class="card-img">
 								<img src="img/vid3.png">
@@ -371,7 +375,6 @@
 								</div>
 							</div>
 						</div>
-						
 					</div>
 
 				</div>
@@ -589,6 +592,49 @@
 
 	<!-- page script -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		
+    		$("#classes-slider-card").owlCarousel({
+    			items: 5,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:5,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+
+    		$("#workout-slider-card").owlCarousel({
+    			items: 4,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:4,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+
+    	})
+    </script>
 
 </body>
 </html>
