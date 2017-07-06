@@ -59,6 +59,7 @@ body.bg-cream{background:#F6F6F6;}
 .card .card-price{float: left; width: 20%; color: #000; font-weight: 500;}
 .card .card-detail{float: left; width: 80%; color: #6F6F6F;}
 .card div .rating{display: inline-block;}
+.cards-invert .card, .cards-invert .card .card-price{color: #fff;}
 
 .section-title h2{font-family: Tungsten; font-size: 44px; font-weight: 600;}
 .section-title h3{font-family: Tungsten; font-size: 26px; margin: 0;}
@@ -309,6 +310,31 @@ a.menu-thumb:hover::after {opacity: 1;}
 .bootstrap-datetimepicker-widget table th.picker-switch{color: #000; font-weight: bold;}
 .bootstrap-datetimepicker-widget table td, .bootstrap-datetimepicker-widget table th{border-radius: 0;}
 
+.individual-event-hero{background-size: cover; background-position: center; background-repeat: no-repeat; color: #fff;}
+.individual-event-hero .container, .individual-event-hero .row, .individual-event-hero .col-xs-12{height: 100%;}
+.ieh-inner{min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px;}
+.ieh-inner h1{font-family: Tungsten; font-size: 82px; font-weight: 600; margin: 0;}
+.ieh-trainer-name{margin-bottom: 10px;}
+.ieh-trainer-name h3{font-family: Tungsten; font-size: 22px; display: inline-block; margin: 0; vertical-align: middle; margin-left: 15px;}
+.ieh-trainer-name img{border-radius: 3px; vertical-align: middle;}
+.event-details .media{border-bottom: 1px solid #D8D8D8; padding: 40px 0; margin:0;}
+.event-details .media:last-child{border-bottom: 0;}
+.event-details .media-left{min-width: 110px;}
+.event-details .media-left h4{font-family: Tungsten; font-size: 26px;}
+.event-details p{color: #181818; font-size: 16px; line-height: 28px;}
+.event-details .checkbox{margin-bottom: 20px; color: #000;}
+.event-details .checkbox input{top: 1px}
+.event-details .checkbox label{font-size: 12px;}
+.ieh-location-block{border-bottom: 1px solid #D8D8D8; padding-bottom: 35px;}
+.ieh-location-block .media{border-bottom: 0;}
+
+.event-sidebar{max-width: 320px; position: relative; margin-top: -304px; display: inline-block; text-align: left;}
+.event-sidebar .event-photo{height: 480px; border-radius: 3px; overflow: hidden; margin-bottom: 26px;}
+.sidebar-event-price{font-family: Tungsten;	font-size: 30px; margin: 0;}
+
+.section-more-classes{padding: 86px; background-color: #101010; color: #fff;}
+.section-more-classes a{color: #fff;}
+
 /*helper*/
 .btn-outline.btn-fb{background:url(../img/Icon_fb.png) 20px center no-repeat transparent;}
 .btn-login-social-wrapper{padding-bottom: 38px; border-bottom: 1px solid #979797; margin-bottom: 38px; margin-top: 30px;}
@@ -317,6 +343,7 @@ a.menu-thumb:hover::after {opacity: 1;}
 .btn:focus, .btn:active, .btn:active:focus{outline: none;}
 .btn-default.active{box-shadow: none;}
 .btn.btn-small{font-size: 12px; padding: 12px;}
+.btn.btn-md{font-family: Tungsten;	font-size: 20px; padding: 10px 20px;}
 .btn.btn-lg{font-family: Tungsten; font-size: 22px; font-weight: 600; padding: 16px 26px;}
 .btn-invert{background-color: #101010; color: #fff; border-color: #000}
 .btn-invert:hover{background-color: #4a4a4a; color: #fff; border-color: #4a4a4a}
@@ -347,6 +374,7 @@ a.menu-thumb:hover::after {opacity: 1;}
 .uline{display: inline-block; position: relative;}
 .uline:after{content: ""; position: absolute; bottom: 10px; left: 0; width: 100%; height: 2px; border-bottom: 1px dotted #000;}
 
+.rating-block .rating{display: inline-block;}
 .rating {text-align: left;}
 .rating > span {display: inline-block;position: relative;margin-left: 5px;}
 
@@ -424,6 +452,9 @@ a.menu-thumb:hover::after {opacity: 1;}
 
 	.filter-block label{display: block;}
 	.filter-block .styled-select{width: 100%;}
+
+	.event-sidebar{margin-top: 0; max-width: none; display: block; margin-bottom: 25px;}
+	.event-sidebar .event-photo{display: none;}
 }
 
 @media screen and (max-width: 560px){
