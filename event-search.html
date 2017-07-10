@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/yamm.css" rel="stylesheet">
+    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<header class="bs-docs-nav navbar navbar-static-top navbar-default yamm" data-spy="affix" data-offset-top="60">
+		<div class="container">
+			<div class="navbar-header">
+				<button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+				<a href="#" class="navbar-brand">
+					<img src="img/logo-124-white.png" class="logo-for-dark">
+					<img src="img/logo-124-transparent.png" class="logo-for-white">
+				</a> 
+			</div>
+			<nav class="collapse navbar-collapse" id="bs-navbar">
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+    					<div class="input-group">
+    						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        					<input class="form-control" id="navsearch" name="navsearch"> 
+        				</div>
+        			</div>
+				</form>
+				<ul class="nav navbar-nav">
+					<li class="dropdown yamm-fw">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">EXPLORE<b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+							<li class="container">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+										<div class="row">
+											<div class="col-xs-12"><h3 class="menu-block-title">CLASSES</h3></div>
+											<div class="col-xs-12 col-md-6">
+												<div class="menu-block">
+													<div class="menu-block-filter">BY CATEGORY</div>
+													<ul>
+														<li><a href="#">FAT LOSS</a></li>
+														<li><a href="#">STRENGTH GAIN</a></li>
+														<li><a href="#">CARDIOVASCULAR</a></li>
+														<li><a href="#">HIIT</a></li>
+														<li><a href="#">RELAXATION</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-xs-12 col-md-6">
+												<div class="menu-block">
+													<div class="menu-block-filter">BY LOCATION</div>
+													<ul>
+														<li><a href="#">DOWNTOWN</a></li>
+														<li><a href="#">LITTLE TOKYO</a></li>
+														<li><a href="#">HOLLYWOOD</a></li>
+														<li><a href="#">MALIBU</a></li>
+														<li><a href="#">ALL LOCATIONS</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<div class="row">
+											<div class="col-xs-12"><h3 class="menu-block-title">WORKOUTS</h3></div>
+											<div class="col-xs-12 col-md-6">
+												<div class="menu-block">
+													<div class="menu-block-filter">BY CATEGORY</div>
+													<ul>
+														<li><a href="#">FAT LOSS</a></li>
+														<li><a href="#">STRENGTH GAIN</a></li>
+														<li><a href="#">CARDIOVASCULAR</a></li>
+														<li><a href="#">HIIT</a></li>
+														<li><a href="#">RELAXATION</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-xs-12 col-md-6">
+												<div class="menu-block">
+													<div class="menu-block-filter">BY LENGTH</div>
+													<ul>
+														<li><a href="#">< 10 MINS</a></li>
+														<li><a href="#">30MINS</a></li>
+														<li><a href="#">< 1HOUR</a></li>
+														<li><a href="#">OVER A HOUR</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<div class="row">
+											<div class="col-xs-12"><h3 class="menu-block-title">ARE YOU A TRAINER?</h3></div>
+											<div class="col-xs-12">
+												<div class="learn-more-image">
+													<img src="img/learn_more.png">
+													<a href="#">LEARN MORE</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+		                </ul>
+	              </li>
+				</ul>
+				<div class="nav navbar-nav navbar-right">
+					<a href="#" class="btn btn-default navbar-btn">SIGN UP</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">LOGIN</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="section-page-filter">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1>DISCOVER EVENTS</h1>
+				</div>
+			</div>
+			<div class="row filter-block">
+				<div class="col-xs-12 col-sm-8 col-md-9">
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="showme">Show me</label>
+					    <div class="styled-select styled-select-large">
+					    	<select id="showme" name="showme">
+						    	<option>All</option>
+						    	<option>Option1 </option>
+						    	<option>Option2 </option>
+						    </select>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="events">events</label>
+					    <div class="styled-select styled-select-large">
+					    	<select id="events" name="showme">
+						    	<option>Earth</option>
+						    	<option>Option1 </option>
+						    	<option>Option2 </option>
+						    </select>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="sorted">sorted by</label>
+					    <div class="styled-select styled-select-large">
+					    	<select id="sorted" name="showme">
+						    	<option>Date</option>
+						    	<option>Option1 </option>
+						    	<option>Option2 </option>
+						    </select>
+					    </div>
+					  </div>
+					</form>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					  <div class="btn-group btn-group-lg" role="group">
+					  	<a class="btn btn-default active btn-tab" href="#searchlist" aria-controls="home" role="tab" data-toggle="tab">List</a>
+					  </div>
+					  <div class="btn-group btn-group-lg" role="group">
+					  	<a class="btn btn-default btn-tab" href="#searchcalendar" aria-controls="home" role="tab" data-toggle="tab">Calendar</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tab-content">
+    	<div role="tabpanel" class="tab-pane active" id="searchlist">
+    		<div class="search-result-wrapper">
+				<div class="container">
+					<div class="row section-title">
+						<div class="col-xs-8">
+							<h3>FEATURED WORKOUTS</h3>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="#">VIEW ALL</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="featured-workouts-slider" class="owl-carousel" style="margin-top: 32px;">
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card card-video">
+									<div class="card-img">
+										<img src="img/vid3.png">
+										<a href="#" class="video-play-btn"></a>
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row section-title">
+						<div class="col-xs-8">
+							<h3>TRENDING WORKOUT PROGRAMS</h3>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="#">VIEW ALL</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="featured-workouts-slider2" class="owl-carousel" style="margin-top: 32px;">
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row section-title">
+						<div class="col-xs-8">
+							<h3>/</h3>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="#">VIEW ALL</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="featured-workouts-slider3" class="owl-carousel" style="margin-top: 32px;">
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row section-title">
+						<div class="col-xs-8">
+							<h3>WORKOUT PROGRAMS FOR BEGINNERS</h3>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="#">VIEW ALL</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="featured-workouts-slider4" class="owl-carousel" style="margin-top: 32px;">
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+								<div class="card">
+									<div class="card-img">
+										<img src="img/card1.png">
+									</div>
+									<div class="card-footer">
+										<div class="clearfix">
+											<div class="card-price">$100</div>
+											<div class="card-detail">1 hour · Workout In the park with Joan</div>
+										</div>
+										<div>
+											<div class="rating rate3">
+												<span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span><span><img src="img/star_off.png"></span>
+											</div>
+											<div class="rating-det">(000)</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a href="#" class="btn btn-invert btn-xg">VIEW MORE</a>
+				</div>
+			</div>
+    	</div>
+    	<div role="tabpanel" class="tab-pane" id="searchcalendar">
+    		<div class="event-search-result-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 pull-right">
+							<div class="date-filter-sidebar">
+								<div class="text-right">
+									<button id="btn-today" class="btn btn-default btn-small">TODAY</button>
+								</div>
+								<div id="calendarfilter" class="inline-calendar"></div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-8 pull-left">
+							<div class="events" style="margin-bottom: 60px;">
+								<div class="event">
+									<div class="event-date">WEDNESDAY, MARCH 22</div>
+									<div class="event-breakdown">
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="event">
+									<div class="event-date">WEDNESDAY, MARCH 23</div>
+									<div class="event-breakdown">
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+										<div class="media">
+										    <div class="media-left">
+										        7:OOAM
+										    </div>
+										    <div class="media-body">
+										    	<div class="media-intro">INSTRUCTOR</div>
+										        <h4 class="media-heading">Title of Event</h4>
+										        <p>Get sweaty in the heart of the part (Event Strapline) · <a href="#">Spots left</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a href="#" class="btn btn-default btn-xg">VIEW MORE</a>
+				</div>
+			</div>
+    	</div>
+	</div>
+
+	<div class="section50">
+		<div class="container">
+			<div class="row section-title2">
+				<div class="col-xs-12 text-center">
+					<div class="w560">
+						<h2>COMING TO A CITY NEAR YOU</h2>
+						<p>Where are we?Where are we?Where are we?Where are we?Where are we?Where are we?Where are we?Where are we?Where are we?</p>
+					</div>
+				</div>
+			</div>
+			<div class="row city-wrapper">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/houston.png"></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/chicago.png"></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/houston.png"></a>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/miami.png"></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/Los angeles.png"></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="simple-img-wrapper">
+						<a href="#" class="grey-hover"><img src="img/chicago.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="row section-ending">
+				<div class="col-xs-12 text-center">
+					<h3>DON’T SEE YOUR CITY? <a href="#">TELL US</a></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-middle hero-footer">
+		<div class="hero-middle-inner">
+			<h1>ARE YOU A TRAINER?</h1>
+			<p>See why hundreds of fitness pros use TrainersVault to create, deliver and level up their coaching businesses with confidence.</p>
+
+			<a href="#" class="btn btn-default btn-lg">LEARN MORE</a>
+		</div>
+	</div>
+
+	<div class="section-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="logo-block">
+						<a href="#"><img src="img/logo-190-transparent.png"></a>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<div class="footer-menu-widget">
+						<h4>TITLE #1</h4>
+						<ul>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<div class="footer-menu-widget">
+						<h4>TITLE #1</h4>
+						<ul>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<div class="footer-menu-widget">
+						<h4>TITLE #1</h4>
+						<ul>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<div class="footer-menu-widget">
+						<h4>TITLE #1</h4>
+						<ul>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+							<li><a href="#">LINK #1</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="row footer-copyright">
+				<div class="col-xs-12">
+					All content Copyright Trainersvault 2017
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- page script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+
+    		$('#calendarfilter').datetimepicker({
+                inline: true,
+                sideBySide: false,
+                format: 'DD/MM/YYYY'
+            });
+
+            $("#btn-today").click(function(){
+            	var today = new Date();
+            	$('#calendarfilter').data("DateTimePicker").date(today);
+            });
+
+            $(".btn-tab").click(function(){
+            	$(".btn-tab").removeClass("active");
+            	$(this).addClass("active");
+            })
+
+            $("#featured-workouts-slider").owlCarousel({
+    			items: 5,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:5,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+
+    		$("#featured-workouts-slider2").owlCarousel({
+    			items: 5,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:5,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+
+    		$("#featured-workouts-slider3").owlCarousel({
+    			items: 5,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:5,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+
+    		$("#featured-workouts-slider4").owlCarousel({
+    			items: 5,
+    			margin: 40,
+    			responsive:{
+			        860:{
+			            items:5,
+			            margin:25
+			        },
+			        560:{
+			        	items: 3,
+			        	margin:15
+			        },
+			        360:{
+			        	items: 2,
+			        	margin:10	
+			        }
+			    }
+    		});
+    	});
+    </script>
+
+</body>
+</html>
