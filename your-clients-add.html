@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/yamm.css" rel="stylesheet">
+    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+    <script type="text/javascript" src="js/jquery.auto-grow-input.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="admin-desk">
+
+	<div class="floating-sidebar">
+		<div class="fs-top"></div>
+		<div class="fs-nav-wrapper">
+			<ul class="fs-nav">
+				<li>
+					<a href="#" class="active"><i class="db-icon db-icon-dashboard"></i> <span>DASHBOARD</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="db-icon db-icon-events"></i> <span>EVENTS</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="db-icon db-icon-invoices"></i> <span>INVOICES</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="db-icon db-icon-digital"></i> <span>DIGITAL</span></a>
+				</li>
+			</ul>
+
+			<ul class="fs-nav">
+				<li>
+					<a href="#"><i class="db-icon db-icon-setting"></i> <span>SETTINGS</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="db-icon db-icon-logout"></i> <span>LOGOUT</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="section-admin-main section-client-search bg-white">
+		<div class="container">
+			<div class="row section-title-block">
+				<div class="col-xs-8">
+					<h3>START TYPING YOUR CLIENTS NAME, OR INVITE THEM</h3>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="btn btn-invert btn-md2">INVITE</button>
+				</div>
+			</div>
+			<div class="row search-block">
+				<div class="col-xs-12">
+					<form>
+						<div class="search-field-wrapper">
+							<input id="txtsearch" type="tex" name="txtsearch" class="form-control" autocomplete="false">
+							<button id="btnclearsearch" class="close" type="button"><img src="img/icon_close_black.png"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- page script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#txtsearch').focus();
+
+    		var searchBlockWidth = $('.search-block').width() - 100;
+    		$('#txtsearch').autoGrowInput({ minWidth: 50, maxWidth: searchBlockWidth, comfortZone: 0 });
+
+    		$('#txtsearch').keyup(function(){
+    			var keywords = $(this).val();
+    			var btnClose = $(this).next();
+
+    			if(keywords != ""){
+    				btnClose.show();
+    				$('.section-title-block').addClass('searching');
+    			}else{
+    				btnClose.hide();
+    				$('.section-title-block').removeClass('searching');
+    			}
+    		});
+
+    		$('#btnclearsearch').click(function(){
+    			$('#txtsearch').val("");
+    			$(this).hide();
+    			$('#txtsearch').focus();
+    			$('.section-title-block').removeClass('searching');
+    		})
+    	})
+
+    	$('html').click(function(e) {                    
+		   	if($(e.target).is("#txtsearch") ||  $(e.target).is("#btnclearsearch")){
+		       	return false;                
+		   	}else{
+		   		if($("#txtsearch").val() == ""){
+		   			$("#txtsearch").focus()
+		   		}
+		   	}
+		}); 
+    </script>
+
+</body>
+</html>
