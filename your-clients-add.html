@@ -73,6 +73,54 @@
 							<button id="btnclearsearch" class="close" type="button"><img src="img/icon_close_black.png"></button>
 						</div>
 					</form>
+
+					<div class="search-result-block noresult">
+						<div class="result-count">143 RESULTS</div>
+						<ul class="media-list result">
+						    <li class="media">
+						        <div class="media-left">
+						            <img src="img/search-media.jpg">
+						        </div>
+						        <div class="media-body">
+						        	<div class="row">
+						        		<div class="col-xs-8 col-sm-6">
+						        			<h4 class="media-heading">CLIENT NAME</h4>
+						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
+						        		</div>
+						        	</div>
+						        	<div class="addclient-label">ADD CLIENT</div>
+						        </div>
+						    </li>
+						    <li class="media">
+						        <div class="media-left">
+						            <img src="img/search-media.jpg">
+						        </div>
+						        <div class="media-body">
+						        	<div class="row">
+						        		<div class="col-xs-8 col-sm-6">
+						        			<h4 class="media-heading">CLIENT NAME</h4>
+						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
+						        		</div>
+						        	</div>
+						        	<div class="addclient-label">ADD CLIENT</div>
+						        </div>
+						    </li>
+						    <li class="media">
+						        <div class="media-left">
+						            <img src="img/search-media.jpg">
+						        </div>
+						        <div class="media-body">
+						        	<div class="row">
+						        		<div class="col-xs-8 col-sm-6">
+						        			<h4 class="media-heading">CLIENT NAME</h4>
+						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
+						        		</div>
+						        	</div>
+						        	<div class="addclient-label">ADD CLIENT</div>
+						        </div>
+						    </li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -94,9 +142,11 @@
     			if(keywords != ""){
     				btnClose.show();
     				$('.section-title-block').addClass('searching');
+    				toggleSearch(true);
     			}else{
     				btnClose.hide();
     				$('.section-title-block').removeClass('searching');
+    				toggleSearch(false);
     			}
     		});
 
@@ -105,8 +155,22 @@
     			$(this).hide();
     			$('#txtsearch').focus();
     			$('.section-title-block').removeClass('searching');
+    			toggleSearch(false);
     		})
+
+    		$(".result li").on("click", function(){
+    			$(".result li").removeClass("active");
+    			$(this).addClass("active");
+    		});
     	})
+
+    	function toggleSearch(open){
+    		if(open){
+    			$(".search-result-block").addClass('haveresult');
+    		}else{
+    			$(".search-result-block").removeClass('haveresult');
+    		}
+    	}
 
     	$('html').click(function(e) {                    
 		   	if($(e.target).is("#txtsearch") ||  $(e.target).is("#btnclearsearch")){
