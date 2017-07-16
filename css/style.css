@@ -6,7 +6,8 @@ body.bg-cream{background:#F6F6F6;}
 input:focus, button:focus, a:focus, input:active, button:active, a:active{outline: none;}
 .navbar-default{border-bottom: 0; background:#fff; border-bottom: 1px solid #DADADA; margin-bottom: 0;}
 .navbar-default .navbar-brand{color: #000000; font-family: Tungsten; font-size: 30px; font-weight: 600; line-height: 30px; height: auto; padding: 18px 15px;}
-.navbar-default .navbar-brand.logo-text{padding: 12px 15px}
+.navbar-default .navbar-brand.logo-text{padding: 12px 15px; cursor: default;}
+.navbar-default .navbar-brand.logo-text:hover{color: #000000}
 .navbar-default .logo-for-dark{display: none;}
 .navbar-default .logo-for-white{display: block;}
 .navbar-default .navbar-nav>li>a{font-size: 12px; color: #000;}
@@ -234,6 +235,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .profile-like img{width: 100%;}
 
 .profile-sidebar{max-width: 300px; margin-top: -300px;}
+.profile-sidebar.no-subnav{margin-top: -234px;}
 .profile-pict-wrapper{overflow: hidden; margin-bottom: 48px;}
 .booking-info{border: 1px solid #D8D8D8; border-radius: 3px; padding: 30px 20px 18px; margin-bottom: 30px; background:#fff;}
 .profile-price{text-align: center; margin-bottom: 35px;}
@@ -372,7 +374,9 @@ a.menu-thumb:hover::after {opacity: 1;}
 
 .search-result-block.noresult{overflow: hidden; max-height: 0; -moz-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1); transition-timing-function: cubic-bezier(0, 1, 0.5, 1);}
 .search-result-block.haveresult{-moz-transition-duration: 0.3s; -webkit-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s; -moz-transition-timing-function: ease-in; -webkit-transition-timing-function: ease-in; -o-transition-timing-function: ease-in; transition-timing-function: ease-in; max-height: 9999px; overflow: hidden;}
-.result-count{border-bottom: 1px solid #D8D8D8; font-size: 12px; padding: 0 0 16px;}
+.result-header{border-bottom: 1px solid #D8D8D8; font-size: 12px; padding: 0 0 16px; font-weight: 500;}
+.result-header a{color: #000;}
+.result-header a:hover{text-decoration: none;}
 .media-list.result .media{padding: 20px; position: relative;}
 .media-list.result .media-heading{font-family: Tungsten; font-size: 26px;}
 .media-list.result p{color: #181818; font-size: 14px;}
@@ -382,6 +386,30 @@ a.menu-thumb:hover::after {opacity: 1;}
 .media-list.result .media:hover, .media-list.result .media.active{background: #000; color: #fff; cursor: pointer;}
 .media-list.result .media:hover p, .media-list.result .media.active p{color: #fff;}
 .media-list.result .media:hover .addclient-label, .media-list.result .media.active .addclient-label{opacity: 1;}
+
+.csb-title{padding: 10px 0;}
+.search-cards{margin-top: 45px;}
+.client-card{background: #fff; border-radius: 3px; overflow: hidden; box-shadow: 0 0 10px 0px #c1c1c1; margin-bottom: 30px;}
+.client-card img{width: 100%; max-width: 100%;}
+.client-card-detail{padding: 15px;}
+.client-card-detail h3{font-family: Tungsten; font-size: 25px; font-weight: 600; margin: 0 0 5px;}
+.client-card .client-location{color: #757575; font-size: 12px; margin-bottom: 14px;}
+.client-card a{color: #757575; }
+.client-card a{text-decoration: none;}
+
+.oneblock-notif{padding: 13px 0; font-size: 12px; color: #6F6F6F; 	background-color: #D8D8D8;}
+.oneblock-notif span{color: #939393; font-family: Tungsten;	font-size: 15px; font-weight: 600; display: inline-block; margin-right: 10px;}
+
+.invoice-paper{border:4px solid #ECECEC; background: #fff; padding: 32px 50px;}
+.invoice-header{border-bottom: 1px solid #D8D8D8; padding-bottom: 46px;}
+.invoice-header h2{font-family: Tungsten; font-size: 40px;	font-weight: 600; margin: 0;}
+.invoice-trainer-address{text-align: right; font-size: 12px;}
+.invoice-body{border-bottom: 1px solid #D8D8D8; padding: 25px 0;}
+.invoice-inner-block-title{color: #FCC702; font-size: 14px; margin-bottom: 10px;}
+.invoice-date-block-detail{font-size: 16px;}
+.invoice-no{font-size: 16px;}
+.invoice-amount{text-align: right;}
+.invoice-amount h3{margin: 0; font-family: Tungsten; font-size: 30px; font-weight: 600;}
 
 /*helper*/
 .btn-outline.btn-fb{background:url(../img/Icon_fb.png) 20px center no-repeat transparent;}
@@ -486,6 +514,8 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 	.navbar-right.no-margin{margin-right: 0;}
 
 	.modalvideo .modal-dialog{max-width: 480px}
+
+	.navbar-right{margin-right:0;}
 }
 
 @media screen and (max-width: 1200px){
@@ -494,6 +524,8 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 
 @media screen and (max-width: 990px){
 	.card{flex: 0 0 25%;}
+
+
 }
 
 @media screen and (max-width: 768px){

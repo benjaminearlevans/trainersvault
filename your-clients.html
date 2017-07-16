@@ -8,14 +8,11 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/yamm.css" rel="stylesheet">
-    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
     
     <link href="css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
-    <script type="text/javascript" src="js/jquery.auto-grow-input.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,6 +22,28 @@
 
 </head>
 <body class="admin-desk">
+
+	<header class="bs-docs-nav navbar navbar-static-top navbar-default yamm" data-spy="affix" data-offset-top="60">
+		<div class="container">
+			<div class="navbar-header">
+				<button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+				<a href="#" class="navbar-brand logo-text">YOUR CLIENT</a> 
+			</div>
+			<nav class="collapse navbar-collapse" id="bs-navbar">
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+    					<div class="input-group">
+    						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        					<input class="form-control" id="navsearch" name="navsearch"> 
+        				</div>
+        			</div>
+				</form>
+				<div class="nav navbar-nav navbar-right">
+					<a href="#" class="btn btn-default navbar-btn">ADD NEW</a>
+				</div>
+			</nav>
+		</div>
+	</header>
 
 	<div class="floating-sidebar">
 		<div class="fs-top"></div>
@@ -57,25 +76,17 @@
 
 	<div class="section-admin-main section-client-search bg-white">
 		<div class="container">
-			<div class="row section-title-block">
-				<div class="col-xs-8">
-					<h3>START TYPING YOUR CLIENTS NAME, OR INVITE THEM</h3>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button class="btn btn-invert btn-md2">INVITE</button>
-				</div>
-			</div>
-			<div class="row search-block">
+			<div class="row search-block" style="margin-top: 20px;">
 				<div class="col-xs-12">
-					<form>
-						<div class="search-field-wrapper">
-							<input id="txtsearch" type="tex" name="txtsearch" class="form-control" autocomplete="false">
-							<button id="btnclearsearch" class="close" type="button"><img src="img/icon_close_black.png"></button>
+					<div class="search-result-block haveresult">
+						<div class="result-header">
+							<div class="row">
+								<div class="col-xs-6">143 RESULTS</div>
+								<div class="col-xs-6 text-right">
+									<a href="#">BY DATE</a> / <a href="#">NAME</a>
+								</div>
+							</div>
 						</div>
-					</form>
-
-					<div class="search-result-block noresult">
-						<div class="result-header"><span>143 RESULTS<span></div>
 						<ul class="media-list result">
 						    <li class="media">
 						        <div class="media-left">
@@ -88,7 +99,7 @@
 						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
 						        		</div>
 						        	</div>
-						        	<div class="addclient-label">ADD CLIENT</div>
+						        	<div class="addclient-label">CONTACT</div>
 						        </div>
 						    </li>
 						    <li class="media">
@@ -102,7 +113,7 @@
 						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
 						        		</div>
 						        	</div>
-						        	<div class="addclient-label">ADD CLIENT</div>
+						        	<div class="addclient-label">CONTACT</div>
 						        </div>
 						    </li>
 						    <li class="media">
@@ -116,7 +127,21 @@
 						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
 						        		</div>
 						        	</div>
-						        	<div class="addclient-label">ADD CLIENT</div>
+						        	<div class="addclient-label">CONTACT</div>
+						        </div>
+						    </li>
+						    <li class="media">
+						        <div class="media-left">
+						            <img src="img/search-media.jpg">
+						        </div>
+						        <div class="media-body">
+						        	<div class="row">
+						        		<div class="col-xs-8 col-sm-6">
+						        			<h4 class="media-heading">CLIENT NAME</h4>
+						            		<p>Summary detail about the client possibly with location details or details of upcoming session</p>	
+						        		</div>
+						        	</div>
+						        	<div class="addclient-label">CONTACT</div>
 						        </div>
 						    </li>
 						</ul>
@@ -128,60 +153,6 @@
 
 	<!-- page script -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-    	$(document).ready(function(){
-    		$('#txtsearch').focus();
-
-    		var searchBlockWidth = $('.search-block').width() - 100;
-    		$('#txtsearch').autoGrowInput({ minWidth: 50, maxWidth: searchBlockWidth, comfortZone: 0 });
-
-    		$('#txtsearch').keyup(function(){
-    			var keywords = $(this).val();
-    			var btnClose = $(this).next();
-
-    			if(keywords != ""){
-    				btnClose.show();
-    				$('.section-title-block').addClass('searching');
-    				toggleSearch(true);
-    			}else{
-    				btnClose.hide();
-    				$('.section-title-block').removeClass('searching');
-    				toggleSearch(false);
-    			}
-    		});
-
-    		$('#btnclearsearch').click(function(){
-    			$('#txtsearch').val("");
-    			$(this).hide();
-    			$('#txtsearch').focus();
-    			$('.section-title-block').removeClass('searching');
-    			toggleSearch(false);
-    		})
-
-    		$(".result li").on("click", function(){
-    			$(".result li").removeClass("active");
-    			$(this).addClass("active");
-    		});
-    	})
-
-    	function toggleSearch(open){
-    		if(open){
-    			$(".search-result-block").addClass('haveresult');
-    		}else{
-    			$(".search-result-block").removeClass('haveresult');
-    		}
-    	}
-
-    	$('html').click(function(e) {                    
-		   	if($(e.target).is("#txtsearch") ||  $(e.target).is("#btnclearsearch")){
-		       	return false;                
-		   	}else{
-		   		if($("#txtsearch").val() == ""){
-		   			$("#txtsearch").focus()
-		   		}
-		   	}
-		}); 
-    </script>
 
 </body>
 </html>
