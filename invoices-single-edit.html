@@ -35,7 +35,8 @@
 			</div>
 			<nav class="collapse navbar-collapse" id="bs-navbar">
 				<div class="nav navbar-nav navbar-right">
-					<a href="invoices-single-edit.html" class="btn btn-default navbar-btn">EDIT</a>
+					<a href="#" class="btn btn-default btn-white navbar-btn">SAVE</a>
+					<a href="#" class="btn btn-default navbar-btn">SEND</a>
 				</div>
 			</nav>
 		</div>
@@ -114,6 +115,7 @@
 												<div><span id="clientCity">City</span> <span id="clientCountry">Country</span></div>
 												<div><span id="clientZip">Zip</span></div>
 											</div>
+											<button id="btnAddClient" class="btn-dashed"><img src="img/add_icon.png"> Add client</button>
 										</div>
 									</div>
 								</div>
@@ -121,14 +123,14 @@
 									<div class="invoice-date-block" style="margin-bottom: 27px;">
 										<div class="invoice-inner-block-title">Date of Issue</div>
 										<div class="invoice-date-block-detail">
-											<span id="dateIssue1">2017/07/17</span>
+											<span id="dateIssue1" data-type="combodate" data-pk="1" data-value="2017/07/17" data-title="Date of Issue"></span>
 											<i class="fa fa-calendar" aria-hidden="true"></i>
 										</div>
 									</div>
 									<div class="invoice-date-block">
 										<div class="invoice-inner-block-title">Due Date</div>
 										<div class="invoice-date-block-detail">
-											<span id="dueDate">2017/07/17</span>
+											<span id="dueDate" data-type="combodate" data-pk="1" data-value="2017/07/17" data-title="Due Date"></span>
 											<i class="fa fa-calendar" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -143,7 +145,7 @@
 									<div class="invoice-amount">
 										<div class="invoice-inner-block-title">Amount Due (USD)</div>
 										<div>
-											<h3 id="amountduetop">$800.00</h3>
+											<h3 id="amountduetop">$00.00</h3>
 										</div>
 									</div>
 								</div>
@@ -158,24 +160,26 @@
 										<th width="120px" class="text-right">Line of Total</th>
 									</thead>
 									<tbody>
-										<tr>
+										<!-- <tr>
 											<td>
 												<div class="item-title">Item Name</div>
 												<div class="item-description">Item description</div>
 											</td>
 											<td class="add-taxes-wrapper">
-												<div class="item-rate">$800</div>
-												<!-- <div class="add-taxes">Add Taxes</div> -->
+												<div class="item-rate">0</div>
+												<div class="add-taxes"></div>
 											</td>
 											<td class="item-quantity-wrapper">
-												<div class="item-quantity">1</div>
+												<div class="item-quantity">0</div>
 											</td>
 											<td>
-												<div class="item-linetotal">$800</div>
+												<div class="item-linetotal">$0</div>
+												<a href="#" class="item-delete"><img src="img/trash.png"></a>
 											</td>
-										</tr>
+										</tr> -->
 									</tbody>
 								</table>
+								<button id="btnAddItem" class="btn-dashed"><img src="img/add_icon.png"> Add a line</button>
 							</div>
 							<div class="invoice-total">
 								<div class="row">
@@ -184,19 +188,19 @@
 											<tbody>
 												<tr>
 													<td>Subtotal</td>
-													<td width="94px" id="subtotal">$800.00</td>
+													<td width="94px" id="subtotal">0.00</td>
 												</tr>
 												<tr>
 													<td>Tax</td>
-													<td width="94px" id="tax">$0.00</td>
+													<td width="94px" id="tax">0.00</td>
 												</tr>
 												<tr>
 													<td>Total</td>
-													<td width="94px" id="total">$800.00</td>
+													<td width="94px" id="total">0.00</td>
 												</tr>
 												<tr class="amount-due">
 													<td class="amount-due-label">Amount Due (USD)</td>
-													<td id="amountdue">$800.00</td>
+													<td id="amountdue">0.00</td>
 												</tr>
 											</tbody>
 										</table>
@@ -219,160 +223,160 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
-    	// 	$.fn.editable.defaults.mode = 'inline';
-    	// 	$.fn.editable.defaults.showbuttons = false;
+    		$.fn.editable.defaults.mode = 'inline';
+    		$.fn.editable.defaults.showbuttons = false;
     		
-    	// 	$(".invoice-trainer-address div").editable({
-    	// 		type:"text"
-    	// 	});
+    		$(".invoice-trainer-address div").editable({
+    			type:"text"
+    		});
 
-    	// 	$("#btnAddClient").click(function(){
-    	// 		$(this).hide();
-    	// 	})
+    		$("#btnAddClient").click(function(){
+    			$(this).hide();
+    		})
 
-    	// 	$("#clientFirstName, #clientLastName, #clientEmail, #clientFirstLineAddress, #clientZip, #invoiceNo").editable({
-    	// 		type:"text"
-    	// 	});
+    		$("#clientFirstName, #clientLastName, #clientEmail, #clientFirstLineAddress, #clientZip, #invoiceNo").editable({
+    			type:"text"
+    		});
 
-    	// 	$("#clientCity").editable({
-    	// 		type:"select",
-    	// 		value: 1,    
-		   //      source: [
-		   //            {value: 1, text: 'City 1'},
-		   //            {value: 2, text: 'City 2'},
-		   //            {value: 3, text: 'City 3'}
-		   //         ]
-    	// 	});
-    	// 	$("#clientCountry").editable({
-    	// 		type:"select",
-    	// 		value: 1,    
-		   //      source: [
-		   //            {value: 1, text: 'Country 1'},
-		   //            {value: 2, text: 'Country 2'},
-		   //            {value: 3, text: 'Country 3'}
-		   //         ]
-    	// 	});
+    		$("#clientCity").editable({
+    			type:"select",
+    			value: 1,    
+		        source: [
+		              {value: 1, text: 'City 1'},
+		              {value: 2, text: 'City 2'},
+		              {value: 3, text: 'City 3'}
+		           ]
+    		});
+    		$("#clientCountry").editable({
+    			type:"select",
+    			value: 1,    
+		        source: [
+		              {value: 1, text: 'Country 1'},
+		              {value: 2, text: 'Country 2'},
+		              {value: 3, text: 'Country 3'}
+		           ]
+    		});
 
-    	// 	$("#dateIssue1").editable({
-    	// 		mode:'popup',
-    	// 		combodate: {
-	    //             minYear: 2000,
-	    //             maxYear: 2050,
-	    //             minuteStep: 1
-		   //      },
-		   //      showbuttons: true
-    	// 	});
+    		$("#dateIssue1").editable({
+    			mode:'popup',
+    			combodate: {
+	                minYear: 2000,
+	                maxYear: 2050,
+	                minuteStep: 1
+		        },
+		        showbuttons: true
+    		});
 
-    	// 	$("#dueDate").editable({
-    	// 		mode:'popup',
-    	// 		combodate: {
-	    //             minYear: 2000,
-	    //             maxYear: 2050,
-	    //             minuteStep: 1
-		   //      },
-		   //      showbuttons: true
-    	// 	});
+    		$("#dueDate").editable({
+    			mode:'popup',
+    			combodate: {
+	                minYear: 2000,
+	                maxYear: 2050,
+	                minuteStep: 1
+		        },
+		        showbuttons: true
+    		});
 
-    	// 	$("#btnAddItem").click(function(){
-    	// 		$("#tblInvoiceItem tbody").append('<tr><td>'+
-					// 							'<div class="item-title"></div>'+
-					// 							'<div class="item-description"></div>'+
-					// 						'</td>'+
-					// 						'<td class="add-taxes-wrapper">'+
-					// 							'<div class="item-rate">0</div>'+
-					// 							'<div class="add-taxes"></div>'+
-					// 						'</td>'+
-					// 						'<td class="item-quantity-wrapper">'+
-					// 							'<div class="item-quantity">1</div>'+
-					// 						'</td>'+
-					// 						'<td>'+
-					// 							'<div class="item-linetotal">$0</div>'+
-					// 							'<a href="#" class="item-delete"><img src="img/trash.png"></a>'+
-					// 						'</td>'+
-					// 					'</tr>');
+    		$("#btnAddItem").click(function(){
+    			$("#tblInvoiceItem tbody").append('<tr><td>'+
+												'<div class="item-title"></div>'+
+												'<div class="item-description"></div>'+
+											'</td>'+
+											'<td class="add-taxes-wrapper">'+
+												'<div class="item-rate">0</div>'+
+												'<div class="add-taxes"></div>'+
+											'</td>'+
+											'<td class="item-quantity-wrapper">'+
+												'<div class="item-quantity">1</div>'+
+											'</td>'+
+											'<td>'+
+												'<div class="item-linetotal">$0</div>'+
+												'<a href="#" class="item-delete"><img src="img/trash.png"></a>'+
+											'</td>'+
+										'</tr>');
 
-    	// 		//inital editable content
-    	// 		$(".item-title").editable({
-    	// 			emptytext: "Item Name",
-	    // 			type:"text"
-	    // 		});
+    			//inital editable content
+    			$(".item-title").editable({
+    				emptytext: "Item Name",
+	    			type:"text"
+	    		});
 
-	    // 		$(".item-description").editable({
-	    // 			emptytext: "Item description",
-	    // 			type:"text"
-	    // 		});
+	    		$(".item-description").editable({
+	    			emptytext: "Item description",
+	    			type:"text"
+	    		});
 
-	    // 		$(".item-quantity").editable({
-	    // 			type:"text"
-	    // 		});
-	    // 		$(".item-quantity").on("hidden", function(e, params){
-	    // 			calculateInvoice();
-	    // 		})
+	    		$(".item-quantity").editable({
+	    			type:"text"
+	    		});
+	    		$(".item-quantity").on("hidden", function(e, params){
+	    			calculateInvoice();
+	    		})
 
-	    // 		$(".item-rate").editable({
-	    // 			type:"text",
-	    // 			display: function(value) {
-				 //      $(this).text('$' + value);
-				 //    }
-	    // 		});
-	    // 		$(".item-rate").on("hidden", function(e, params){
-	    // 			calculateInvoice();
-	    // 		})
+	    		$(".item-rate").editable({
+	    			type:"text",
+	    			display: function(value) {
+				      $(this).text('$' + value);
+				    }
+	    		});
+	    		$(".item-rate").on("hidden", function(e, params){
+	    			calculateInvoice();
+	    		})
 
-	    // 		$(".add-taxes").editable({
-	    // 			emptytext: "Add Taxes",
-	    // 			type:"text",
-	    // 			display: function(value) {
-	    // 				if(value != ""){
-	    // 					$(this).text(value + "%");
-	    // 				}
-				 //    } 
-	    // 		});
-	    // 		$(".add-taxes").on("hidden", function(e, params){
-	    // 			calculateInvoice();
-	    // 		});
-    	// 	});
+	    		$(".add-taxes").editable({
+	    			emptytext: "Add Taxes",
+	    			type:"text",
+	    			display: function(value) {
+	    				if(value != ""){
+	    					$(this).text(value + "%");
+	    				}
+				    } 
+	    		});
+	    		$(".add-taxes").on("hidden", function(e, params){
+	    			calculateInvoice();
+	    		});
+    		});
 
-    	// 	$("#tblInvoiceItem").on("click", ".item-delete", function(e){
-    	// 		e.preventDefault();
-    	// 		var tr = $(this).closest("tr");
-    	// 		tr.remove();
+    		$("#tblInvoiceItem").on("click", ".item-delete", function(e){
+    			e.preventDefault();
+    			var tr = $(this).closest("tr");
+    			tr.remove();
 
-    	// 		calculateInvoice();
-    	// 	})
-    	// });
+    			calculateInvoice();
+    		})
+    	});
 
-    	// function calculateInvoice(){
-    	// 	var totalTaxes = 0;
-    	// 	var subTotal = 0;
+    	function calculateInvoice(){
+    		var totalTaxes = 0;
+    		var subTotal = 0;
     		
-    	// 	$("#tblInvoiceItem>tbody>tr").each(function(index){
-    	// 		var currentLine = $(this);
-    	// 		var itemeRate = parseInt(currentLine.find(".item-rate").text().replace("$", ""));
-    	// 		var itemQuantity = currentLine.find(".item-quantity").text();
-    	// 		var lineTotal = itemQuantity * itemeRate;
+    		$("#tblInvoiceItem>tbody>tr").each(function(index){
+    			var currentLine = $(this);
+    			var itemeRate = parseInt(currentLine.find(".item-rate").text().replace("$", ""));
+    			var itemQuantity = currentLine.find(".item-quantity").text();
+    			var lineTotal = itemQuantity * itemeRate;
 
-    	// 		var lineTotalControl = currentLine.find(".item-linetotal");
-    	// 		lineTotalControl.text("$" + lineTotal);
+    			var lineTotalControl = currentLine.find(".item-linetotal");
+    			lineTotalControl.text("$" + lineTotal);
 
-    	// 		var taxAmount = 0;
-    	// 		if(currentLine.find(".add-taxes").text() != "Add Taxes"){
-    	// 			taxes = parseInt(currentLine.find(".add-taxes").text().replace("%", ""));
-    	// 			taxAmount = taxes/100 * lineTotal;
-    	// 			totalTaxes += taxAmount;
-    	// 		}
+    			var taxAmount = 0;
+    			if(currentLine.find(".add-taxes").text() != "Add Taxes"){
+    				taxes = parseInt(currentLine.find(".add-taxes").text().replace("%", ""));
+    				taxAmount = taxes/100 * lineTotal;
+    				totalTaxes += taxAmount;
+    			}
 
-    	// 		subTotal += lineTotal;
-    	// 		$("#subtotal").text("$" + subTotal);
+    			subTotal += lineTotal;
+    			$("#subtotal").text("$" + subTotal);
 
-    	// 		$("#tax").html("$" + totalTaxes);
+    			$("#tax").html("$" + totalTaxes);
 
-    	// 		var total = subTotal + totalTaxes;
-    	// 		$("#total").html("$" + total);
+    			var total = subTotal + totalTaxes;
+    			$("#total").html("$" + total);
 
-    	// 		$("#amountdue, #amountduetop").html("$" + total);			
-    	// 	})
-    	// }
+    			$("#amountdue, #amountduetop").html("$" + total);			
+    		})
+    	}
     </script>
 
 </body>
