@@ -8,6 +8,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .navbar-default .navbar-brand{color: #000000; font-family: Tungsten; font-size: 30px; font-weight: 600; line-height: 30px; height: auto; padding: 18px 15px;}
 .navbar-default .navbar-brand.logo-text{padding: 12px 15px; cursor: default;}
 .navbar-default .navbar-brand.logo-text:hover{color: #000000}
+.navbar-default .navbar-brand.logo-text span{color: #FCC702;}
 .navbar-default .logo-for-dark{display: none;}
 .navbar-default .logo-for-white{display: block;}
 .navbar-default .navbar-nav>li>a{font-size: 12px; color: #000;}
@@ -433,6 +434,45 @@ a.menu-thumb:hover::after {opacity: 1;}
 .invoice-total table>tbody>tr.amount-due>td{border-top: 1px solid #D8D8D8; border-bottom: 1px solid #D8D8D8; padding: 22px 0;}
 .invoice-total table>tbody>tr.amount-due>td.amount-due-label{color: #FCC702}
 .invoice-footer-title{color: #FCC702; font-weight: 500; margin-bottom: 8px;}
+
+.invoicechart-widget .c3-axis.c3-axis-x .domain, .invoicechart-widget .c3-axis.c3-axis-x line{display: none;}
+
+.revenuechart-wrapper{position: relative;}
+.revenuechart-info{position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; flex-direction: column;}
+.revenuechart-info h3{font-family: Tungsten; font-size: 56px; margin: 0; line-height: normal;}
+.revenuechart-info .sublabel{font-size: 12px; color: #6F6F6F; margin-top: -5px;}
+.revenue-widget .pieProgress{max-width: 230px; margin: 0 auto;}
+
+.widget-small-title{color: #6F6F6F; font-size: 12px; font-weight: 500; margin-bottom: 40px;}
+.top-paying-client-widget a{color: #6F6F6F;	font-size: 12px; font-weight: 500;}
+.top-paying-client-list{margin-bottom: 45px;}
+.top-paying-client-list .media{margin-bottom: 10px;}
+.top-paying-client-list .media-heading{color: #101010; font-family: Tungsten; font-size: 36px; font-weight: 600; margin-bottom: 0; margin-top: -3px;}
+.top-paying-client-list p{color: #6F6F6F; font-size: 12px; font-weight: 500; margin-bottom: 0; margin-top: -2px;}
+
+.block{padding: 52px 0;}
+.block.soft-grey-block{background: #f4f4f4;}
+.block-title, .bootstrap-table-header{font-family: Tungsten;	font-size: 30px; font-weight: 600; margin: 0 0 27px;}
+.addnew-invoce-btn{display: block; min-height: 286px; border: 3px dashed #D8D8D8; border-radius: 3px; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #6F6F6F;}
+.invoice-card{min-height: 286px; border: 3px solid #dddddd; border-radius: 3px; background: #fff; position: relative; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 0;}
+.invoice-card-bottom{color: #000000; font-family: Tungsten;	font-size: 24px; font-weight: 600; text-align: center; padding: 6px 15px 3px; background-color: #D8D8D8; margin: 0 -3px; border-radius: 0 0 3px 3px;}
+.invoice-card-top{padding: 18px 20px 10px; display: flex; flex-direction: column; justify-content: space-between; flex: 1 1 auto;}
+.invoice-card-amount{color: #939393; font-family: Tungsten; font-size: 40px; font-weight: 600; text-align: right; border-top: 1px solid #D8D8D8; padding: 15px 0 0;}
+.invoice-card-no{color: #6F6F6F; font-size: 16px; margin-bottom: 5px;}
+.invoice-card-client{font-family: Tungsten; font-size: 30px; font-weight: 600; color: #000; margin: 0;}
+.invoice-card-date{color: #B3B3B3; font-size: 12px;}
+.invoice-card-paid .invoice-card-bottom{background-color: #FCC702; color: #fff;}
+.invoice-card-sent .invoice-card-bottom{background-color: #1F1F1F; color: #fff;}
+
+.fixed-table-toolbar .form-control{height: 30px;}
+.bootstrap-table-header{margin: 0; display: inline-block; vertical-align: middle; margin-right: 10px;}
+.bootstraptable th{color: #6F6F6F; font-size: 12px; font-weight: normal;}
+.bootstraptable th .checkbox.checkbox-only{margin: 0; position: relative; top: 7px;}
+.bootstraptable td{font-size: 16px;}
+.tableinvoices-wrapper{margin-top: 35px;}
+
+.tbl-invoice-client{font-size: 16px;}
+.tbl-invoice-no, .tbl-invoice-status{color: #6F6F6F;	font-size: 12px;}
 
 /*helper*/
 .btn-outline.btn-fb{background:url(../img/Icon_fb.png) 20px center no-repeat transparent;}
