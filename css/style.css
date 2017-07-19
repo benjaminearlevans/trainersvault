@@ -327,6 +327,9 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 
 .event-sidebar{max-width: 320px; position: relative; margin-top: -304px; display: inline-block; text-align: left;}
 .event-sidebar .event-photo{height: 480px; border-radius: 3px; overflow: hidden; margin-bottom: 26px;}
+.event-sidebar .event-photo a{display: block; position: relative;}
+.event-sidebar .event-photo a:after{content: ""; display: inline-block; width: 82px; height: 82px; background: url(../img/icon_play.png) center center no-repeat transparent; position: absolute; top: 50%; left: 50%; margin-top: -41px; margin-left: -41px; opacity: .5; transition: opacity .5s ease;}
+.event-sidebar .event-photo a:hover:after{opacity: 1;}
 .sidebar-event-price{font-family: Tungsten;	font-size: 30px; margin: 0;}
 
 .section-more-classes{padding: 86px; background-color: #101010; color: #fff;}
