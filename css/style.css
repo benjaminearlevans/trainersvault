@@ -305,6 +305,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .bootstrap-datetimepicker-widget table th.picker-switch{color: #000; font-weight: bold;}
 .bootstrap-datetimepicker-widget table td, .bootstrap-datetimepicker-widget table th{border-radius: 0;}
 
+.main-content-with-subnav .event-sidebar{margin-top: -364px}
 .individual-event-hero{background-size: cover; background-position: center; background-repeat: no-repeat; color: #fff;}
 .individual-event-hero .container, .individual-event-hero .row, .individual-event-hero .col-xs-12{height: 100%;}
 .ieh-inner{min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px;}
@@ -315,11 +316,12 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .event-details .media{border-bottom: 1px solid #D8D8D8; padding: 40px 0; margin:0;}
 .event-details .media:last-child{border-bottom: 0;}
 .event-details .media-left{min-width: 110px;}
-.event-details .media-left h4{font-family: Tungsten; font-size: 26px;}
+.event-details .media-left h4{font-family: Tungsten; font-size: 26px; margin-top: 5px;}
 .event-details p{color: #181818; font-size: 16px; line-height: 28px;}
 .event-details .checkbox{margin-bottom: 20px; color: #000;}
 .event-details .checkbox input{top: 1px}
 .event-details .checkbox label{font-size: 12px;}
+.event-details ul{font-size: 16px;}
 .ieh-location-block{border-bottom: 1px solid #D8D8D8; padding-bottom: 35px;}
 .ieh-location-block .media{border-bottom: 0;}
 
@@ -329,6 +331,21 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 
 .section-more-classes{padding: 86px; background-color: #101010; color: #fff;}
 .section-more-classes a{color: #fff;}
+
+.faq-item{font-size: 16px; margin-bottom: 30px;}
+.faq-item:last-child{margin-bottom: 0;}
+.faq-title{font-weight: 500; margin-bottom: 10px;}
+
+.workouts-block{background: #F6F6F6; padding: 60px 0;}
+.workouts-block-title{font-family: Tungsten; font-size: 40px; margin: 0 0 32px;}
+.workouts-video-list{background: #fff; border-radius: 2px; overflow: hidden;}
+.workouts-video-list .media{padding: 20px; border-bottom: 1px solid #D8D8D8; margin-bottom: 0}
+.workouts-video-list .media:last-child{border-bottom: 0;}
+.workouts-video-list .media-left{padding-right: 20px}
+.workouts-video-list .media-left a{display: block; width: 200px; height: 110px; background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center; line-height: 110px; transition: opacity .5s ease;}
+.workouts-video-list .media-left a:hover{opacity: 0.7}
+.workouts-video-list .media-heading{margin:0 0 10px; font-size: 16px; font-weight: 500;}
+.workouts-video-list p{color: #000;}
 
 /*admin*/
 .admin-desk .container{max-width: 980px}
@@ -567,6 +584,9 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 
 .block-vertical-middle{height: 100%; display: flex; justify-content: center; flex-direction: column;}
 .w428{max-width: 428px; margin: 0 auto;}
+.heavier{font-weight: 500;}
+.styled-list{list-style-image: url(../img/check_icon.png);}
+.styled-list li{margin-bottom: 5px;}
 
 /*tweak*/
 .editable-click, a.editable-click, a.editable-click:hover{border-bottom: 0;}
@@ -632,8 +652,9 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 	.filter-block label{display: block;}
 	.filter-block .styled-select{width: 100%;}
 
-	.event-sidebar{margin-top: 0; max-width: none; display: block; margin-bottom: 25px;}
+	.event-sidebar, .main-content-with-subnav .event-sidebar{margin-top: 0; max-width: none; display: block; margin-bottom: 25px;}
 	.event-sidebar .event-photo{display: none;}
+	.event-sidebar .btn{margin-top: 15px;}
 
 	.custom-dropdown .dropdown-inline-label{display: none;}
 	.custom-dropdown .btn span.data-label-placement{margin: 0;}
@@ -642,6 +663,11 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 
 	.subnav .nav li{float: none;}
 	.subnav-mobile h4{display: block;}
+
+	.workouts-video-list .media-left, .workouts-video-list .media-right{display: block; padding: 0;}
+	.workouts-video-list .media-left a{width: 100%; margin-bottom: 15px; height: 25vh; line-height: 25vh;}
+
+	.section-more-classes{padding: 20px 15px;}
 }
 
 @media screen and (max-width: 560px){
@@ -650,4 +676,6 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 	.profile-video{margin:20px auto 0;}
 
 	.card{flex: 0 0 50%;}
+
+	.workouts-video-list .media-left a{height: 15vh; line-height: 15vh;}
 }
