@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,6 +39,9 @@
 			</li>
 			<li>
 				<a href="#" id="navaddcoverimg">COVER IMAGES</a>
+			</li>
+			<li>
+				<a href="#" id="navintrovideo">INTRO VIDEO</a>
 			</li>
 			<li>
 				<a href="#" id="navpricing">PRICES & TICKETS</a>
@@ -62,15 +66,15 @@
 							<div class="form-control-wrapper">
 								<div class="form-group">
 									<label for="eventname">Event Name</label>
-									<input type="text" id="eventname" class="form-control">
+									<input type="text" id="eventname" class="form-control bindto" data-bindto="preview-name">
 								</div>
 								<div class="form-group">
-									<label for="description">Description</label>
-									<textarea class="form-control" id="description" rows="5" cols="1"></textarea>
+									<label for="oneliner">One liner</label>
+									<input type="text" id="oneliner" class="form-control bindto" data-bindto="preview-oneliner">
 								</div>
 								<div class="form-group">
-									<label for="tags">Give the event a few tags</label>
-									<input type="text" id="tags" class="form-control">
+									<label for="youwilldo">What will you be doing?</label>
+									<textarea class="form-control bindto" id="youwilldo" rows="5" cols="1" data-bindto="preview-youwilldo"></textarea>
 								</div>
 
 								<div class="action-wrapper">
@@ -86,7 +90,7 @@
 							<div class="form-control-wrapper">
 								<div class="form-group">
 									<label for="eventname">Country</label>
-									<select id="country" class="form-control">
+									<select id="country" class="form-control bindtoselect" data-bindto="preview-country">
 										<option>Country 1</option>
 										<option>Country 2</option>
 										<option>Country 3</option>
@@ -94,15 +98,15 @@
 								</div>
 								<div class="form-group">
 									<label for="address1">Address line 1</label>
-									<input type="text" id="address1" class="form-control">
+									<input type="text" id="address1" class="form-control bindto" data-bindto="preview-address1">
 								</div>
 								<div class="form-group">
 									<label for="address2">Address line 2</label>
-									<input type="text" id="address2" class="form-control">
+									<input type="text" id="address2" class="form-control bindto" data-bindto="preview-address2">
 								</div>
 								<div class="form-group">
 									<label for="zipcode">zipcode</label>
-									<input type="text" id="zipcode" class="form-control">
+									<input type="text" id="zipcode" class="form-control bindto" data-bindto="preview-zipcode">
 								</div>
 
 								<div class="action-wrapper">
@@ -175,6 +179,24 @@
 							</div>
 						</div>
 
+						<div id="sectionintrovideo" class="wizard-section">
+							<h2 class="wizard-title">ADD AN INTRO VIDEO</h2>
+							<div class="wizard-description">Events with intro videos are proven to make 22% more money than ones without. Use the form below to add a video, don’t worry, you can also do this later.</div>
+
+							<div class="form-group">
+								<label for="addintro">Would you like to add an intro video?</label>
+								<select id="addintro" class="form-control bindtoselect" data-bindto="preview-introvideo">
+									<option>No</option>
+									<option>Yes</option>
+								</select>
+							</div>
+
+
+							<div class="action-wrapper">
+								<button type="button" class="btn btn-invert">NEXT STEP</button>
+							</div>
+						</div>
+
 						<div id="sectionpricing" class="wizard-section">
 							<h2 class="wizard-title">PRICING AND TICKETS</h2>
 							<div class="wizard-description">Add the number of tickets that are available to purchase. You can add more later. All prices are in USD</div>
@@ -184,19 +206,19 @@
 									<div class="col-xs-12 col-sm-6">
 										<div class="form-group">
 											<label for="ticketname">Ticket Name</label>
-											<input type="text" id="ticketname" class="form-control">
+											<input type="text" id="ticketname" class="form-control bindto" data-bindto="preview-ticketname">
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-3">
 										<div class="form-group">
 											<label for="quantity">Quantity</label>
-											<input type="text" id="quantity" class="form-control">
+											<input type="text" id="quantity" class="form-control bindto" data-bindto="preview-quantity">
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-3">
 										<div class="form-group">
 											<label for="price">Price</label>
-											<input type="text" id="price" class="form-control">
+											<input type="text" id="price" class="form-control bindto" data-bindto="preview-price">
 										</div>
 									</div>
 								</div>
@@ -244,47 +266,47 @@
 							<div class="form-control-wrapper">
 								<div class="form-group">
 									<label for="notes">Notes</label>
-									<textarea class="form-control" id="description" rows="5" cols="1"></textarea>
+									<textarea class="form-control bindto" id="notes" rows="5" cols="1" data-bindto="preview-notes"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Remember to bring</label>
-									<div class="row">
+									<div class="row bring-option">
 										<div class="col-xs-12 col-sm-6">
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Bottle of Water
+											    	<input type="checkbox" value="Bottle of Water"> Bottle of Water
 												</label>
 											</div>
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Yoga matt
+											    	<input type="checkbox" value="Yoga matt"> Yoga matt
 												</label>
 											</div>
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Sun Screen
+											    	<input type="checkbox" value="Sun Screen"> Sun Screen
 												</label>
 											</div>
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Positive Atitude
+											    	<input type="checkbox" value="Positive Atitude"> Positive Atitude
 												</label>
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-6">
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Small Towel
+											    	<input type="checkbox" value="Small Towel"> Small Towel
 												</label>
 											</div>
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Great Vibes
+											    	<input type="checkbox" value="Great Vibes"> Great Vibes
 												</label>
 											</div>
 											<div class="checkbox">
 											    <label>
-											    	<input type="checkbox"> Good Energy
+											    	<input type="checkbox" value="Good Energy"> Good Energy
 												</label>
 											</div>
 										</div>
@@ -302,20 +324,20 @@
 							<div class="form-control-wrapper">
 								<div class="form-group">
 									<label>Does your workout…</label>
-									<div>
+									<div class="yourworkout">
 										<div class="checkbox">
 										    <label>
-										    	<input type="checkbox"> Skipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping Rope
+										    	<input type="checkbox" value="Skipping Rope 1"> Skipping Rope 1
 											</label>
 										</div>
 										<div class="checkbox">
 										    <label>
-										    	<input type="checkbox"> Skipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping Rope
+										    	<input type="checkbox" value="Skipping Rope 2"> Skipping Rope 2
 											</label>
 										</div>
 										<div class="checkbox">
 										    <label>
-										    	<input type="checkbox"> Skipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping RopeSkipping Rope
+										    	<input type="checkbox" value="Skipping Rope 3"> Skipping Rope 3
 											</label>
 										</div>
 									</div>
@@ -333,13 +355,13 @@
 						<div class="phone-wrapper">
 							<div class="phone-screen">
 								<ul class="phone-preview-list">
-									<li class="no-padding">
-										<img src="img/imgcover-preview.jpg">
+									<li class="preview-section-addcoverimg no-padding noval">
+										<img id="preview-coverimage" src="img/imgcover-preview.jpg">
 									</li>
-									<li class="active">
+									<li class="preview-section-keydetail">
 										<div>
-											<h2>EVENT NAME</h2>
-											<div class="phone-preview-detail">This is a one line description of the event - a strap line that hooks the audience</div>
+											<h2 id="preview-name">EVENT NAME</h2>
+											<div id="preview-oneliner" class="phone-preview-detail">This is a one line description of the event - a strap line that hooks the audience</div>
 										</div>
 										<div class="preview-event-by">
 											<div class="preview-event-by-inner">
@@ -350,33 +372,49 @@
 											</div>
 										</div>
 									</li>
-									<li>
+									<li class="preview-section-keydetail">
 										<h3>KEY DETAILS</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div id="preview-youwilldo" class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
 									</li>
-									<li>
+									<li class="preview-section-location">
 										<h3>LOCATION & DATE</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div class="phone-preview-detail">
+											<div id="preview-country">Country</div>
+											<div id="preview-address1">Address 1</div>
+											<div id="preview-address2"></div>
+											<div id="preview-zipcode">1234</div>
+										</div>
 									</li>
 									<li>
 										<h3>COVER IMAGE</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div class="phone-preview-detail" id="preview-coverimage-text">No</div>
 									</li>
-									<li>
+									<li class="preview-section-introvideo">
 										<h3>INTRO VIDEO</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div id="preview-introvideo" class="phone-preview-detail">No</div>
 									</li>
-									<li>
+									<li class="preview-section-pricing">
 										<h3>PRICES & TICKETS</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div class="phone-preview-detail">
+											<table class="table">
+												<tr>
+													<td id="preview-ticketname">No ticket</td>
+													<td id="preview-quantity" class="td-quantity">0</td>
+													<td id="preview-price" class="td-price">0</td>
+												</tr>
+											</table>
+										</div>
 									</li>
-									<li>
+									<li class="preview-section-additionalnotes">
 										<h3>ADDITIONAL DETAILS</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div class="phone-preview-detail">
+											<div id="preview-notes">No notes</div>
+											<div id="preview-notes-items"></div>
+										</div>
 									</li>
-									<li>
+									<li class="preview-section-review">
 										<h3>REVIEW</h3>
-										<div class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+										<div id="preview-review" class="phone-preview-detail"></div>
 									</li>
 								</ul>
 							</div>
@@ -391,6 +429,9 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
+
+    		$(".phone-screen").scrollTo(".preview-section-keydetail", 500);
+
     		$('#startdate').datetimepicker({
     			format: 'DD/MM/YYYY'
     		});
@@ -419,6 +460,7 @@
 			$(".wizard-section .btn-invert").click(function(){
 				var viewWizard = $(this).closest(".wizard-section");
 				var nextViewWizard = viewWizard.next();
+				var nextViewId = nextViewWizard.attr("id").replace("section","");
 				var navIndex = parseInt(viewWizard.attr("data-nav-index"));
 
 				var navId = viewWizard.attr("id").replace("section","");
@@ -430,9 +472,12 @@
 					$(".wizard-content").removeClass("invert");
 				}
 
+				$(".phone-preview-list li").removeClass("active");
+				$(".preview-section-"+nextViewId).addClass("active");
+				$(".phone-screen").scrollTo(".preview-section-"+nextViewId, 500);
+
 				$(".wizard-section").removeClass("active");
 				nextViewWizard.addClass("active");
-
 			});
 
 			$(".wizard-nav a").click(function(e){
@@ -447,10 +492,50 @@
 				}
 
 				$(".wizard-section").removeClass("active");
+				$(".phone-preview-list li").removeClass("active");
+
 				$("#section"+navId).addClass("active");
+				$(".preview-section-"+navId).addClass("active");
+				$(".phone-screen").scrollTo(".preview-section-"+navId, 500);
 
 			})
 
+			//bind effect
+			$(".bindto").keyup(function(){
+				var target = $(this).attr("data-bindto");
+				var value = $(this).val();
+
+				$("#" + target).html(value);
+			});
+
+			$(".bindtoselect").change(function(){
+				var target = $(this).attr("data-bindto");
+				var value = $('option:selected',this).text();
+				
+				$("#" + target).html(value);
+			})
+
+			$(".bring-option input[type='checkbox']").change(function(e) {
+				var val = $(this).val();
+		        var labelId = val.replace(/\s/g, "");
+		        
+		        if($(this).is(":checked")) {
+		        	$("#preview-notes-items").append("<span id='label-"+ labelId +"' class='label label-primary'>"+ $(this).val() +"</span>");
+		        }else{
+		        	$("#label-" + labelId).remove();
+		        }
+		    });
+
+		    $(".yourworkout input[type='checkbox']").change(function(e) {
+				var val = $(this).val();
+		        var labelId = val.replace(/\s/g, "");
+		        
+		        if($(this).is(":checked")) {
+		        	$("#preview-review").append("<span id='label-"+ labelId +"' class='label label-primary'>"+ $(this).val() +"</span>");
+		        }else{
+		        	$("#label-" + labelId).remove();
+		        }
+		    });
 
     	})
 
@@ -466,6 +551,9 @@
 		        reader.onload = function (e) {
 		            $("#controluploadpreview").removeClass("no-img");
 		            $('#controluploadpreview img').attr('src', e.target.result);
+		            $("#preview-coverimage").attr('src', e.target.result);
+		            $("#preview-coverimage-text").html("yes");
+		            $(".preview-section-addcoverimg").removeClass("noval");
 		        }
 
 		        reader.readAsDataURL(input.files[0]);
