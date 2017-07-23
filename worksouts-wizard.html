@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/yamm.css" rel="stylesheet">
+    <link href="css/dropdowns-enhancement.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-tagsinput.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="admin-desk">
+	
+	<div class="wizard-nav-wrapper">
+		<ul class="wizard-nav">
+			<li>
+				<a href="#" id="navkeydetail">KEY DETAILS</a>
+			</li>
+			<li>
+				<a href="#" id="navaddcoverimg">COVER IMAGES</a>
+			</li>
+			<li>
+				<a href="#" id="navaddvideo">ADD VIDEOS</a>
+			</li>
+			<li>
+				<a href="#" id="navnotes">NOTES</a>
+			</li>
+			<li>
+				<a href="#" id="navprices">PRICES</a>
+			</li>
+			<li>
+				<a href="#" id="navreview">REVIEW</a>
+			</li>
+		</ul>
+	</div>
+	<div class="wizard-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<form class="wizard-content-inner">
+						<div id="sectionkeydetail" class="wizard-section active">
+							<h2 class="wizard-title">KEY DETAILS</h2>
+							<div class="wizard-description">Tell us about your workout program, remember this is what customers will see first so make it stand out!</div>
+
+							<div class="form-control-wrapper">
+								<div class="form-group">
+									<label for="programtitle">Program Title</label>
+									<input type="text" id="programtitle" class="form-control bindto" data-bindto="preview-programtitle">
+								</div>
+								<div class="form-group">
+									<label for="oneliner">One liner</label>
+									<input type="text" id="oneliner" class="form-control bindto" data-bindto="preview-oneliner">
+								</div>
+								<div class="form-group">
+									<label for="programdescription">Program Description</label>
+									<textarea class="form-control bindto" id="programdescription" rows="5" cols="1" data-bindto="preview-description"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="workouttags">Tags (Makes it easier to find playlists)</label>
+									<input type="text" id="workouttags" class="form-control" data-role="tagsinput">
+								</div>
+
+								<div class="action-wrapper">
+									<button type="button" class="btn btn-invert">NEXT STEP</button>
+								</div>
+							</div>
+						</div>
+						<div id="sectionaddcoverimg" class="wizard-section">
+							<h2 class="wizard-title">ADD A COVER IMAGE(S)</h2>
+							<div class="wizard-description">Give your workout program a cover photo. <br>Tip: Try to showcase yourself and clients! Photos must be at least ### X ### pixels.</div>
+
+							<div class="upload-imgcover-wrapper">
+								<div>Make it count!</div>
+								<a id="controluploadpreview" href="#" class="upload-preview-block no-img">
+									<img src="">
+								</a>
+								<input id="controlfileupload" type="file" name="imgcover">
+							</div>
+
+							<div class="action-wrapper">
+								<button type="button" class="btn btn-invert">NEXT STEP</button>
+							</div>
+						</div>
+
+						<div id="sectionaddvideo" class="wizard-section">
+							<h2 class="wizard-title">ADD VIDEOS</h2>
+							<div class="wizard-description">Your workout programs are made by uploading a series of content that your customers can access. You may upload video files or written pdfs. Click the drop down to begin.</div>
+
+							<div id="videooption-default" class="videooption">
+								<div class="form-group">
+									<label >Videos</label>
+									<select class="form-control videoselect">
+										<option>Video 1</option>
+										<option>Video 2</option>
+										<option>Video 3</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="wizard-add-another">
+								<a id="btnAddVideo" href="#"><i class="fa fa-plus-square-o"></i> Add Another</a>
+							</div>
+
+							<div class="action-wrapper">
+								<button type="button" class="btn btn-invert">NEXT STEP</button>
+							</div>
+						</div>
+
+						<div id="sectionnotes" class="wizard-section">
+							<h2 class="wizard-title">NOTES</h2>
+							<div class="wizard-description">Please use this space to tell customers what they need to know in order to be prepared for your digital workout.</div>
+
+							<div class="form-control-wrapper">
+								<div class="form-group">
+									<label for="thingstoremember">Things to remeber</label>
+									<textarea class="form-control bindto" id="thingstoremember" rows="5" cols="1" data-bindto="preview-thingstoremember"></textarea>
+								</div>
+
+								<div class="action-wrapper">
+									<button type="button" class="btn btn-invert">NEXT STEP</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="sectionprices" class="wizard-section">
+							<h2 class="wizard-title">PRICING</h2>
+							<div class="wizard-description">How much does this digital workout cost? All prices are in USD</div>
+
+							<div class="form-control-wrapper">
+								<div id="costperperson" class="form-group">
+									<label for="cost">Cost per Person</label>
+									<input type="text" id="cost" class="form-control bindto" data-bindto="preview-cost">
+								</div>
+								<div id="couponcode-wrapper" class="form-group hidden">
+									<label for="couponcode">Coupon Code</label>
+									<input type="text" id="couponcode" class="form-control bindto" data-bindto="preview-couponcode">
+								</div>
+								<div class="wizard-add-another">
+									<a id="btnAddCoupon" href="#"><i class="fa fa-plus-square-o"></i> Add Coupon Codes</a>
+								</div>
+
+								<div class="action-wrapper">
+									<button type="button" class="btn btn-invert">NEXT STEP</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="sectionreview" class="wizard-section">
+							<h2 class="wizard-title">REVIEW YOUR PROGRAM</h2>
+							<div class="wizard-description">Use this space to tell customers what they need to know in order to get the best out of your event.</div>
+
+							<div class="form-control-wrapper">
+								<div class="form-group">
+									<label>Make sure your listing include the following:</label>
+									<div class="includecheck">
+										<div class="checkbox">
+										    <label>
+										    	<input type="checkbox" value="include1"> An informative description of your workout program
+											</label>
+										</div>
+										<div class="checkbox">
+										    <label>
+										    	<input type="checkbox" value="include2"> Inspirational cover artwork for your program
+											</label>
+										</div>
+										<div class="checkbox">
+										    <label>
+										    	<input type="checkbox" value="include3"> A list of FAQ's and responses
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="action-wrapper">
+									<button type="button" class="btn btn-default">SUBMIT</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="fixed-right">
+						<div class="phone-wrapper">
+							<div class="phone-screen">
+								<ul class="phone-preview-list">
+									<li class="preview-section-addcoverimg no-padding noval">
+										<img id="preview-coverimage" src="img/imgcover-preview.jpg">
+									</li>
+									<li class="preview-section-keydetail active">
+										<div>
+											<h2 id="preview-programtitle">PROGRAM TITLE</h2>
+											<div id="preview-oneliner" class="phone-preview-detail">This is a one line description of the event - a strap line that hooks the audience</div>
+										</div>
+										<div class="preview-event-by">
+											<div class="preview-event-by-inner">
+												<div class="preview-by-detail">Fat Loss workout led by Cortney Woodruff</div>
+												<div class="preview-profile-photo">
+													<img src="img/profile-thumb40.png" class="pull-right">
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="preview-section-keydetail active">
+										<h3>DESCRIPTION</h3>
+										<div id="preview-description" class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+									</li>
+									<li class="preview-section-addvideo">
+										<h3>WORKOUTS</h3>
+										<div class="phone-preview-detail">
+											<div id="videopreview-default" class="preview-video-block">
+												<div>
+													<img src="img/video-preview.jpg">
+												</div>
+												<h3>Title of video</h3>
+												<div class="preview-video-details">This is a description of the video. Perfect intro to get people to sign up. it has space for up to 3 lines of text</div>
+											</div>
+										</div>
+									</li>
+									<li class="preview-section-notes">
+										<h3>NOTES</h3>
+										<div id="preview-thingstoremember" class="phone-preview-detail">Description that corellates to the title above it - this is sample text</div>
+									</li>
+									<li class="preview-section-prices">
+										<h3>PRICES</h3>
+										<div class="phone-preview-detail">
+											<div><span>$</span><span id="preview-cost"></span></div>
+											<div>Coupon: <span id="preview-couponcode">-</span></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- page script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+
+    		$("#btnAddVideo").click(function(e){
+    			e.preventDefault();
+
+    			//ONLY FOR TESTINF PURPOSE
+    			var randId = Math.floor(Math.random() * 1000) + 1;
+    			var ctl = '<div id="videooption-'+ randId +'" class="videooption">'+
+								'<div class="form-group">'+
+									'<label>Would you like to add an intro video?</label>'+
+									'<select class="form-control videoselect">'+
+										'<option>Video 1</option>'+
+										'<option>Video 2</option>'+
+										'<option>Video 3</option>'+
+									'</select>'+
+								'</div>'+
+								'<div class="wizard-small-remove">'+
+									'<a id="btnRemoveVideo" href="#"><i class="fa fa-trash-o"></i> Remove</a>'+
+								'</div>'+
+							'</div>';
+
+				var ctlVideoPreview = '<div id="videopreview-'+ randId +'" class="preview-video-block">'+
+											'<div>'+
+												'<img src="img/video-preview.jpg">'+
+											'</div>'+
+											'<h3>Video 1</h3>'+
+											'<div class="preview-video-details">This is a description of the video. Perfect intro to get people to sign up. it has space for up to 3 lines of text</div>'+
+										'</div>';
+
+				$(ctlVideoPreview).insertAfter($(".preview-video-block").last());
+				$(ctl).insertAfter($(".videooption").last());
+    		})
+
+    		$("#btnAddCoupon").click(function(e){
+    			e.preventDefault();
+    			$("#couponcode-wrapper").toggleClass("hidden");
+    		})
+
+    		$(document).on("click", "#btnRemoveVideo", function(){
+    			var parent = $(this).closest(".videooption");
+    			var previewVideoId = parent.attr("id").replace("videooption","videopreview");
+    			
+    			parent.remove();
+    			$("#"+ previewVideoId).remove();
+    		})
+
+    		$(".phone-screen").scrollTo(".preview-section-keydetail", 500);
+
+    		$("#controluploadpreview").click(function(e){
+    			e.preventDefault()
+    			$("#controlfileupload").trigger("click");
+    		})
+
+    		$("#controlfileupload").change(function(){
+			    readURL(this);
+			});
+
+			$(".wizard-section .btn-invert").click(function(){
+				var viewWizard = $(this).closest(".wizard-section");
+				var nextViewWizard = viewWizard.next();
+				var nextViewId = nextViewWizard.attr("id").replace("section","");
+				var navIndex = parseInt(viewWizard.attr("data-nav-index"));
+
+				var navId = viewWizard.attr("id").replace("section","");
+				$("#nav" + navId).parent().addClass("active");
+
+				if(navId == "prices"){
+					$(".wizard-content").addClass("invert");
+				}else{
+					$(".wizard-content").removeClass("invert");
+				}
+
+				$(".phone-preview-list li").removeClass("active");
+				$(".preview-section-"+nextViewId).addClass("active");
+				$(".phone-screen").scrollTo(".preview-section-"+nextViewId, 500);
+
+				$(".wizard-section").removeClass("active");
+				nextViewWizard.addClass("active");
+			});
+
+			$(".wizard-nav a").click(function(e){
+				e.preventDefault();
+
+				var navId = $(this).attr("id").replace("nav","");
+
+				if(navId == "review"){
+					$(".wizard-content").addClass("invert");
+				}else{
+					$(".wizard-content").removeClass("invert");
+				}
+
+				$(".wizard-section").removeClass("active");
+				$(".phone-preview-list li").removeClass("active");
+
+				$("#section"+navId).addClass("active");
+				$(".preview-section-"+navId).addClass("active");
+				$(".phone-screen").scrollTo(".preview-section-"+navId, 500);
+
+			})
+
+			//bind effect
+			$(".bindto").keyup(function(){
+				var target = $(this).attr("data-bindto");
+				var value = $(this).val();
+
+				$("#" + target).html(value);
+			});
+
+			$(document).on("change", ".videoselect", function(){
+				var parentId = $(this).closest(".videooption").attr("id");
+				var videoPreviewId = parentId.replace("videooption", "videopreview");
+
+				$("#" + videoPreviewId).find("h3").html($(this).find("option:selected").html());
+			});
+
+    	})
+
+    	function showView(viewId){
+    		$(".wizard-section").removeClass("active");
+    		$(viewId).addClass("active");
+    	}
+
+    	function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+
+		        reader.onload = function (e) {
+		            $("#controluploadpreview").removeClass("no-img");
+		            $('#controluploadpreview img').attr('src', e.target.result);
+		            $("#preview-coverimage").attr('src', e.target.result);
+		            $("#preview-coverimage-text").html("yes");
+		            $(".preview-section-addcoverimg").removeClass("noval");
+		        }
+
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+    </script>
+</body>
+</html>
