@@ -54,6 +54,21 @@
 			</li>
 		</ul>
 	</div>
+	<div class="wizard-mobile-menu-collapse">
+		<button id="btnShowSidebarMenu" class="collapsed navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+	</div>
+	<div class="wizard-dropdown-section">
+		<select id="mobileNavDropdown" class="form-control">
+			<option value="sectionkeydetail">KEY DETAILS</option>
+			<option value="sectionlocation">LOCATION & DATE</option>
+			<option value="sectionaddcoverimg">COVER IMAGES</option>
+			<option value="sectionintrovideo">INTRO VIDEO</option>
+			<option value="sectionpricing">PRICES & TICKETS</option>
+			<option value="sectionadditionalnotes">ADDITIONAL NOTES</option>
+			<option value="sectionreview">REVIEW</option>
+		</select>
+	</div>
+
 	<div class="wizard-content">
 		<div class="container-fluid">
 			<div class="row">
@@ -536,6 +551,17 @@
 		        	$("#label-" + labelId).remove();
 		        }
 		    });
+
+		    $("#btnShowSidebarMenu").click(function(){
+		    	$(".wizard-nav-wrapper").toggleClass("active");
+		    })
+
+		    $("#mobileNavDropdown").change(function(){
+		    	var sectionId = "#" + $(this).val();
+		    	var sectionTop = $(sectionId).offset().top - 120;
+
+		    	$(window).scrollTo(sectionTop, 500);
+		    })
 
     	})
 
