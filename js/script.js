@@ -1,5 +1,11 @@
 $(document).ready(function(){
+	$('.dashboard-nav .navbar-toggle').click(function(){
+		$('.floating-sidebar').addClass('active');
+	})
 
+	$('.fs-top').click(function(){
+		$('.floating-sidebar').removeClass('active');
+	})
 })
 
 $(window).scroll(function(){

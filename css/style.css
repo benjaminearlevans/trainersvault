@@ -46,6 +46,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .navbar-default.affix .form-control{color: #000;}
 
 .subnav{border-bottom: 1px solid #D8D8D8;}
+.subnav.affix{left: 0; top: 51px; width: 100%; z-index: 900; background: #fff; border-top: 1px solid #D8D8D8;}
 .subnav .nav a{font-size: 12px; padding: 22px 15px; font-weight: 500; text-transform: uppercase; border-radius: 0; line-height: normal; color: #000; cursor: pointer; display: block; position: relative;}
 .subnav .nav a:hover{cursor: pointer; background:#fff;}
 .subnav .nav li.active a{background:#fff; color: #000;}
@@ -252,6 +253,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .form-cancel{margin: 15px 0 60px; font-size: 12px; position: absolute;}
 .form-cancel a{color: #6F6F6F;}
 .form-cancel a:hover{text-decoration: none;}
+.form-intro{color: #898989;	font-size: 14px; margin: 36px 0 30px;}
 
 .fixed-bottom{position: absolute; bottom: 0; left: 15px;}
 .trainer-name{color: #fff; text-align: right; margin-bottom: 25px;}
@@ -395,6 +397,8 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .event-sidebar .event-photo a:after{content: ""; display: inline-block; width: 82px; height: 82px; background: url(../img/icon_play.png) center center no-repeat transparent; position: absolute; top: 50%; left: 50%; margin-top: -41px; margin-left: -41px; opacity: .5; transition: opacity .5s ease;}
 .event-sidebar .event-photo a:hover:after{opacity: 1;}
 .sidebar-event-price{font-family: Tungsten;	font-size: 30px; margin: 0;}
+.event-sidebar.affix{position: fixed !important; z-index: 10001;}
+.event-sidebar.affix-bottom{left: 0 !important;}
 
 .section-more-classes{padding: 86px; background-color: #101010; color: #fff;}
 .section-more-classes a{color: #fff;}
@@ -723,7 +727,7 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 	.filter-block label{display: block;}
 	.filter-block .styled-select{width: 100%;}
 
-	.event-sidebar, .main-content-with-subnav .event-sidebar{margin-top: 0; max-width: none; display: block; margin-bottom: 25px;}
+	.event-sidebar, .main-content-with-subnav .event-sidebar{margin-top: 0; max-width: none; display: block; margin-bottom: 25px; position: relative !important; z-index: 0;}
 	.event-sidebar .event-photo{display: none;}
 	.event-sidebar .btn{margin-top: 15px;}
 
@@ -754,6 +758,33 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 	.wizard-mobile-menu-collapse .navbar-toggle .icon-bar{background: #fff;}
 	.wizard-dropdown-section{display: block;}
 
+	.dashboard-nav .navbar-header {float: none;}
+    .dashboard-nav .navbar-toggle {display: block;}
+    .dashboard-nav .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+    .dashboard-nav .navbar-collapse.collapse {display: block!important;}
+    .dashboard-nav .navbar-nav {float: none!important;margin: 7.5px 0;}
+    .dashboard-nav .navbar-nav>li {float: none;}
+    .dashboard-nav .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
+    .dashboard-nav .navbar-text {float: none; margin: 15px 0;}
+    .dashboard-nav .navbar-collapse.collapse.in {display: block!important;}
+    .dashboard-nav .collapsing {overflow: hidden!important;}
+	.dashboard-nav, .dashboard-nav.affix{background:#000;}
+	.dashboard-nav .navbar-brand{display: none;}
+	.dashboard-nav .navbar-toggle{float: none; margin-left: 5px; border: 0;}
+	.dashboard-nav .navbar-toggle .icon-bar{background-color: #fff;}
+	.dashboard-nav .navbar-toggle:focus, .dashboard-nav .navbar-toggle:active, .dashboard-nav .navbar-toggle:hover{background: none;}
+	.dashboard-nav .btn{display: block;}
+	.dashboard-nav .container{width: auto;}
+	.dashboard-nav .container>.navbar-collapse{margin-left: -15px; margin-right: -15px; padding-right: 15px; padding-left: 15px;}
+	.dashboard-nav .navbar-left{float: none !important;}
+	.dashboard-nav .navbar-form{margin-left: -15px; margin-right: -15px;}
+	.floating-sidebar{width: 100%; left: -100%; transition: left .5s ease;}
+	.floating-sidebar.active{left: 0;}
+	.floating-sidebar i{display: none;}
+	.fs-nav-wrapper{justify-content: center; height: 100%;}
+	.floating-sidebar .fs-top{background: url(../img/icon_close.png) center center no-repeat transparent; width: 21px; height: 21px; position: absolute; top: 20px; left: 20px;}
+	.fs-nav li a{font-family: Tungsten; font-size: 60px; font-weight: 600; padding: 0 20px; line-height: normal; text-align: left; opacity: 1;}
+
 }
 
 @media screen and (max-width: 560px){
@@ -764,4 +795,8 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 	.card{flex: 0 0 50%;}
 
 	.workouts-video-list .media-left a{height: 15vh; line-height: 15vh;}
+
+	.section-dailybrief{padding: 25px 0;}
+	.db-content{font-size: 40px; line-height: normal;}
+	a.menu-thumb{margin-bottom: 10px;}
 }
