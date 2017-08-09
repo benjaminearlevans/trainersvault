@@ -117,6 +117,7 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .upload-imgcover-wrapper{margin-top: 22px;}
 .upload-preview-block{display: inline-block; border: 2px dotted #D8D8D8; background: url(../img/no-img-upload-thumb.png) center center no-repeat transparent; margin-top: 10px;}
 .upload-preview-block.no-img{min-width: 232px; min-height: 294px;}
+.upload-preview-block.size-square{min-width: 302px; min-height: 302px;}
 .upload-preview-block img{max-width: 100%;}
 .upload-preview-block.no-img img{display: none;}
 #controlfileupload{display: none;}
@@ -562,7 +563,31 @@ a.menu-thumb:hover::after {opacity: 1;}
 .tbl-invoice-client{font-size: 16px;}
 .tbl-invoice-no, .tbl-invoice-status{color: #6F6F6F;	font-size: 12px;}
 
+.setting-review-list .media-heading{font-weight: normal; color: #757575; font-family: "HelveticaNeue";	font-size: 12px;}
+.setting-review-list p{color: #181818; 	line-height: 28px;}
+.setting-review-list .media-left{padding-right: 40px;}
+
+.notification-setting-list h4{margin-top: 0; font-size: 16px;}
+.notification-setting-list div{margin-bottom: 8px;}
+.notification-setting-list>tbody>tr>td{padding: 16px;}
+.notification-setting-list>tbody>tr>td:first-child{padding-left: 0; padding-right: 4px;}
+.notification-setting-list>tbody>tr:first-child>td{border-top: 0;}
+.table-payments>thead>tr>th{color: #6F6F6F; font-size: 12px; font-weight: normal;}
+.table-payments>tbody>tr>td{padding-top: 16px; padding-bottom: 16px;}
+
 /*helper*/
+.form-large-fields .form-control{font-size: 14px; padding: 17px 20px; height: auto; border-radius: 2px; border-color: #E0E0E0; box-shadow: none;}
+.form-large-fields .form-control:focus{outline: none; box-shadow: none;}
+.form-large-fields label{color: #252729; font-size: 14px; font-weight: normal;}
+.form-large-heading{margin-bottom: 25px;}
+.form-large-title{font-family: Tungsten; font-size: 30px;}
+.form-large-description{color: #181818;	font-family: "Helvetica Neue"; font-size: 16px; line-height: 28px;}
+
+.right-sidebar-nav{border: 1px solid #D8D8D8; border-radius: 3px; overflow: hidden; padding: 18px 0; margin-top: 20px;}
+.right-sidebar-nav>li>a{font-family: Tungsten; font-size: 24px; line-height: normal; color: #B0B0B0; padding: 6px 36px;}
+.right-sidebar-nav>li.active>a{color: #000;}
+.right-sidebar-nav>li>a:hover{background: #fff; color: #000;}
+
 .btn-outline.btn-fb{background:url(../img/Icon_fb.png) 20px center no-repeat transparent;}
 .btn-login-social-wrapper{padding-bottom: 38px; border-bottom: 1px solid #979797; margin-bottom: 38px; margin-top: 30px;}
 .btn-login-social-wrapper.no-border{border:0; padding: 0; margin:17px 0 0;}
@@ -586,6 +611,8 @@ a.menu-thumb:hover::after {opacity: 1;}
 .btn.btn-love{padding: 0; font-size: 16px; padding: 11px 12px 9px; line-height: normal; color: #D9D9D9; border-color: #D9D9D9;}
 .btn.btn-love:hover{color: #F7366C;}
 .btn-dashed{border: 3px dashed #F0F0F0; width: 100%; background-color: #fff; color: #6F6F6F; font-size: 16px; padding: 20px}
+.btn-addmore{color: #000;}
+.btn-addmore:hover{text-decoration: none; color: #000;}
 
 .alert-invert{color: #fff; border-radius: 3px;	background-color: #101010;}
 .alert-invert .close{color: #fff; opacity: 1;}
@@ -646,6 +673,7 @@ a:hover .db-icon-logout, .active .db-icon-logout{background-image: url(../img/ic
 .styled-select select {background: transparent; border: 0; font-size: 14px; height: 100%; width: 200%}
 .styled-select select:focus, .styled-select select:active{outline: none;}
 select.form-control{-webkit-appearance:none; height: auto; background: url(../img/icon_arrow_large.png) right 20px center no-repeat #fff;}
+.form-inline.editableform select.form-control{-webkit-appearance:menulist; background: none; height: 29px;}
 
 .styled-select-large select{font-size: 22px; color: #101010; min-width: 120px;}
 .modalvideo .modal-content{border-radius: 0;}
@@ -664,6 +692,10 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 .editable-click, a.editable-click, a.editable-click:hover{border-bottom: 0;}
 .editable-unsaved{font-weight: normal;}
 .bootstrap-tagsinput .tag{display: inline-block;}
+.alert-warning{background: #FCC702; border-color:#FCC702; border-radius: 0; padding: 6px 7px;}
+.alert-warning .alert-content{color: #8F7101; line-height: 43px; padding-left: 10px;}
+.alert-warning .btn{padding: 14px; border: 2px solid #8F7101; font-size: 12px; color: #8F7101;}
+.alert-warning .fa{font-size: 30px; position: relative; top: 5px; margin-right: 15px;}
 
 @media screen and (min-width: 1200px){
 	.container{max-width: 1090px;}
