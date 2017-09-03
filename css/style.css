@@ -176,13 +176,17 @@ input:focus, button:focus, a:focus, input:active, button:active, a:active{outlin
 .photo-box-simple.favorite:after{content: " "; position: absolute; width: 40px; height: 45px; background: url(../img/badge.png) center center no-repeat transparent; right: 12px; top: 0;}
 .photo-box-simple img{width: 100%;}
 
-.hero-middle{height: 620px; padding: 0 15px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.hero-middle{height: 620px; padding: 0 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;}
 .hero-middle .btn{margin-top: 50px;}
 .hero-middle h1{font-family: Tungsten;	font-size: 84px;font-weight: 600;line-height: 118px;}
 .hero-middle p{font-size: 18px; line-height: 28px; color: #fff;}
 .hero-middle-inner{max-width: 586px; text-align: center;}
+.hero-middle-footer{position: absolute; bottom: 50px; left: 0; width: 100%; text-align: center; font-family: Tungsten;	font-size: 36px;}
 
 .hero-middle-yourgoal{background:url(../img/yourgoal-hero.png) center center no-repeat transparent;  background-size: cover; color: #fff;}
+.hero-valign-middle{height: 100vh; background: #000; color: #fff;}
+.hero-valign-middle-inner{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 15px;}
+.hero-valign-middle-inner h1{font-family: Tungsten;	font-size: 100px; max-width: 880px;}
 
 .section-title2 h2{font-family: Tungsten; font-size: 60px; font-weight: 600; line-height: 72px;}
 .section-title2 p{font-size: 16px; line-height: 24px;}
@@ -575,6 +579,98 @@ a.menu-thumb:hover::after {opacity: 1;}
 .table-payments>thead>tr>th{color: #6F6F6F; font-size: 12px; font-weight: normal;}
 .table-payments>tbody>tr>td{padding-top: 16px; padding-bottom: 16px;}
 
+.hero-with-form{height: 100vh; background: url(../img/boxing.jpg) center center no-repeat #000; color: #fff;}
+.hero-with-form .container, .hero-with-form .row, .hero-with-form .col-xs-12{height: 100%;}
+.hero-with-form .hh-innner{height: 100%; display: flex; justify-content: center; flex-direction: column;}
+.hero-with-form h1{color: #FFFFFF; font-family: Tungsten; font-size: 130px; margin: 0 0 40px;}
+.hero-with-form p{color: #fff; font-size: 18px; max-width: 395px; margin-bottom: 50px;}
+.hero-with-form .hero-inline-form-wrapper{margin-bottom: 24px;}
+.hero-note{font-size: 12px;}
+.form-inline.form-inline-large .form-control{font-size: 18px; height: auto; padding: 19.5px 20px; border-radius: 2px 0 0 2px; border-color: #fff; box-shadow: none; min-width: 360px;}
+.form-inline.form-inline-large .btn{background: #FCC702; color: #070707; font-family: Tungsten; font-size: 22px; padding: 19px 33px; border-radius: 0 2px 2px 0; margin-left: -3px;}
+
+.trainer-desk-intro{padding: 85px 15px;}
+.tdi-inner{max-width: 690px; margin: 0 auto 50px; }
+.tdi-inner h2{font-family: Tungsten; font-size: 44px; margin: 0 0 30px;}
+.tdi-inner .tdi-description{color: #6F6F6F; font-size: 16px; line-height: 24px;}
+.tdi-thumb{max-width: 180px; margin: 0 auto;}
+.tdi-thumb h3{color: #252729; font-family: Tungsten; font-size: 24px;}
+.tdi-thumb .tdi-thumb-img{background: #F2F2F2;}
+
+.mid-nav-wrapper{border-top: 1px solid #D8D8D8;}
+.mid-nav-wrapper .nav>li>a{color: #000; font-size: 14px; padding: 20px; border-right: 1px solid #D8D8D8;}
+.mid-nav-wrapper .nav>li:first-child>a{border-left: 1px solid #D8D8D8;}
+.mid-nav-wrapper .nav>li>a>img{margin-right: 20px;}
+.mid-nav-wrapper.affix{position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 1001; border-bottom: 1px solid #D8D8D8;}
+
+.coaching-step-wrapper{background: url(../img/coach-step.png) center bottom no-repeat #000; padding: 95px 0; color: #fff;}
+.coaching-step-title{font-family: Tungsten; font-size: 44px; text-align: center; margin-bottom: 68px;}
+.coaching-step{max-width: 510px; margin: 0 auto; padding: 0; list-style: none;}
+.coaching-step>li{padding-left: 50px; position: relative; padding-bottom: 54px; border-left: 1px solid #979797;}
+.coaching-step>li+li{margin-top: -20px;}
+.coaching-step>li:last-child{border: 0;}
+.coaching-step>li:before{content: " "; width: 42px; height: 42px; background: #fff; position: absolute; top: 0; left: -21px; border-radius: 50%;}
+.coaching-step>li>h3{font-family: Tungsten;	font-size: 30px;}
+.coaching-step>li>p{font-size: 18px; color: #fff;}
+.coaching-step-form-wrapper{max-width: 510px; margin: 0 auto;}
+.coaching-step-form-wrapper h2{text-align: center; font-family: Tungsten; font-size: 52px; margin-bottom: 32px;}
+
+.homedesk-graph-block{padding: 94px 0; background: #FCC702; color: #fff; text-align: center;}
+.homedesk-graph-block img{max-width: 100%;}
+.block-with-halfimg .container{max-width: 830px;}
+.hg-top{max-width: 560px; margin: 0 auto;}
+.hg-top h2{font-family: Tungsten; font-size: 44px; margin: 0 0 30px;}
+.hg-top p{font-size: 16px;	line-height: 24px; color: #fff; margin: 0;}
+.block-with-halfimg{position: relative; min-height: 720px; padding-bottom: 100px;}
+.block-with-halfimg .bwh-bg{position: absolute; top: 0; left: 0; width: 100%; min-height: 560px; background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #000;}
+.bhw-title{font-family: Tungsten; font-size: 44px; margin: 100px 0 56px; color: #fff; text-align: center;}
+.bhw-video{min-height: 460px; background: #fff; border: 1px solid #E0E0E0; border-radius: 3px; overflow: hidden;}
+.bhw-intro{margin-top: 72px; margin-bottom: 46px;}
+.bhw-intro h3{margin: 28px 0 12px; font-family: Tungsten; font-size: 30px;}
+.bhw-intro p{font-size: 16px; margin-bottom: 25px; line-height: 24px;}
+.bhw-details{margin-top: 47px;}
+.bhw-details h4{font-family: Tungsten; font-size: 22px;}
+.bhw-details p{font-size: 16px;	line-height: 22px;}
+.htd-getstarted{background: #000; color: #fff; padding: 194px 0;}
+.htd-getstarted h2{font-size: 84px; margin-bottom: 66px;}
+
+.hero-gym{background: url(../img/gym3.jpg) center center no-repeat; background-size: cover; position: relative;}
+.hero-footer-wrapper{position: absolute; bottom: 50px; left: 0; width: 100%;}
+.hero-link{color: #fff; font-family: Tungsten;	font-size: 36px; }
+.hero-link:hover{color: #fff; text-decoration: none;}
+
+.section-intro-words{padding: 75px 0;}
+.w610{max-width: 610px; margin: 0 auto;}
+.section-intro-words p{font-size: 22px; line-height: 34px;}
+
+.hero-middle-trainers{color: #fff; background: url(../img/blackboard.jpg) center center no-repeat #000; background-size: cover;}
+.hero-middle-trainers .hero-middle-inner{max-width: 860px;}
+.hero-middle-trainers h1{font-family: Tungsten;	font-size: 240px; line-height: normal; margin:0;}
+.hero-middle-trainers h2{font-family: Tungsten;	font-size: 61px; line-height: normal; margin: -50px 0 0; letter-spacing: 11px;}
+.hero-middle-trainers h3{font-family: Tungsten;	font-size: 36px; line-height: 46px;}
+
+.hero-middle-personal-trainer, .hero-middle-how{background: url(../img/personal-trainer3.jpg) center center no-repeat #000; color: #fff; background-size: cover;}
+.hero-middle-personal-trainer .hero-middle-inner, .hero-middle-how .hero-middle-inner{max-width: 880px;}
+.hero-middle-personal-trainer h2, .hero-middle-how h2{font-family: Tungsten;	font-size: 100px;	font-weight: 600;	line-height: 100px;}
+.hero-middle-personal-trainer h3, .hero-middle-how h3{font-size: 36px;}
+
+.hero-middle-how{background-image: url(../img/run.jpg);}
+
+.section-after-midhero{padding: 70px 0;}
+.section-after-midhero h2{font-family: Tungsten; font-size: 60px; font-weight: 600;	line-height: 69px; margin: 0;}
+.section-after-midhero p{font-size: 22px; line-height: 34px; margin-bottom: 20px;}
+.section-after-midhero ul{list-style: none; padding: 0; margin: 0;}
+.section-after-midhero ul li{padding-bottom: 25px; padding-left: 100px; border-left: 2px dashed #000; position: relative;}
+.section-after-midhero ul li:after{content: " "; position: absolute; top: -5px; left: -43px; width: 86px; height: 70px; background: url(../img/ic-shakehand.png) center center no-repeat transparent;}
+.section-after-midhero ul li.enginering:after{background-image: url(../img/ic-mesh.png);}
+.section-after-midhero ul li.media-production:after{background-image: url(../img/ic-play-square.png);}
+.section-after-midhero ul li.talent:after{background-image: url(../img/ic-star.png);}
+.section-after-midhero ul li.learning:after{background-image: url(../img/ic-book.png);}
+.section-after-midhero ul li:last-child{border-left: 0;}
+.section-after-midhero ul h3{font-family: Tungsten;	font-size: 30px; margin-top: 0;}
+.section-after-midhero ul div{font-size: 16px; color: #6F6F6F;}
+
+
 /*helper*/
 .form-large-fields .form-control{font-size: 14px; padding: 17px 20px; height: auto; border-radius: 2px; border-color: #E0E0E0; box-shadow: none;}
 .form-large-fields .form-control:focus{outline: none; box-shadow: none;}
@@ -713,6 +809,7 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 
 @media screen and (max-width: 1200px){
 	.filter-block .form-group{margin-bottom: 15px !important;}
+	.mid-nav-wrapper .nav>li>a{height: 80px; overflow: hidden; white-space: nowrap; max-width: 180px; text-overflow: ellipsis;}
 }
 
 @media screen and (max-width: 1068px){
@@ -817,6 +914,18 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 	.floating-sidebar .fs-top{background: url(../img/icon_close.png) center center no-repeat transparent; width: 21px; height: 21px; position: absolute; top: 20px; left: 20px;}
 	.fs-nav li a{font-family: Tungsten; font-size: 60px; font-weight: 600; padding: 0 20px; line-height: normal; text-align: left; opacity: 1;}
 
+	.hero-with-form{height: auto; padding-top: 70px; padding-bottom: 25px;}
+	.hero-with-form h1{font-size: 60px; line-height: normal; margin-bottom: 15px;}
+	.htd-getstarted{padding: 25px 0;}
+
+	.mid-nav-wrapper{border: 0;}
+	.mid-nav-wrapper .nav-justified>li{display: inline-block; width: 49%;}
+	.mid-nav-wrapper .nav-justified>li>a{border: 1px solid #D8D8D8; white-space: normal; max-width: none; text-overflow:unset;}
+	.mid-nav-wrapper.affix{position: static;}
+	.form-inline.form-inline-large .form-control{border-radius: 2px}
+	.form-inline.form-inline-large .btn{border-radius: 2px; margin-left:0;}
+
+	.hero-middle-personal-trainer h2, .hero-middle-how h2{font-size: 70px; line-height: normal;}
 }
 
 @media screen and (max-width: 560px){
@@ -831,4 +940,13 @@ select.form-control{-webkit-appearance:none; height: auto; background: url(../im
 	.section-dailybrief{padding: 25px 0;}
 	.db-content{font-size: 40px; line-height: normal;}
 	a.menu-thumb{margin-bottom: 10px;}
+
+	.coaching-step>li:before{width: 24px; height: 24px; left: -12px;}
+	.coaching-step>li{padding-left: 24px;}
+
+	.mid-nav-wrapper .nav-justified>li{width: 100%;}
+
+	.section-after-midhero ul{margin-top: 25px;}
+	.section-after-midhero ul li{margin-left: 25px; padding-left: 60px;}
+	.section-after-midhero ul li:after{top: -14px; left: -30px; width: 60px;background-size: 100%;}
 }
