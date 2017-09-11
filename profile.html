@@ -200,7 +200,7 @@
 						</div>
 						<div class="profile-action">
 							<a href="#" class="btn btn-invert btn-lg btn-block">BOOK NOW</a>
-							<a href="#" class="btn btn-default btn-lg btn-block">SEND MESSAGE</a>
+							<a href="#modalSendMessage" class="btn btn-default btn-lg btn-block" data-toggle="modal">SEND MESSAGE</a>
 							<a href="#" class="btn btn-default btn-lg btn-block btn-with-icon"><i class="glyphicon glyphicon-heart"></i>SAVE</a>
 						</div>
 						<div class="profile-saved">Saved 132 times</div>
@@ -569,6 +569,31 @@
 		      	</div>
 		    </div>
 		  </div>
+	</div>
+
+	<div class="modal fade modal-send-msg" id="modalSendMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<a href="#" class="close" data-dismiss="modal"><img src="img/icon_close_black.png"></a>
+					<h4 class="modal-title" id="myModalLabel">Message [Trainername].</h4>
+					<p class="modal-subtitle">Please use the fied below to reach out to [TrainerName]</p>
+					<form class="form-large-fields">
+						<div class="form-group">
+							<label for="email">Your email</label>
+							<input type="email" class="form-control" placeholder="Your email" name="email">
+						</div>
+						<div class="form-group">
+							<label for="email">Your message</label>
+							<textarea class="form-control" rows="5" cols="1"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-invert btn-md2" value="CONTACT">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 
